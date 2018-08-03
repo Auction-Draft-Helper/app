@@ -13,7 +13,9 @@ app.get("/", (req, res, next) => {
 });
 
 const startListening = () => {
-  app.listen(PORT, () => console.log(`Mixing it up on port ${PORT}`));
+  app.listen(process.env.PORT || 8080, () =>
+    console.log(`Mixing it up on port ${PORT}`)
+  );
 };
 
 startListening();

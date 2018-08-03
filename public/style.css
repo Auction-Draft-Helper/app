@@ -3,8 +3,8 @@
   padding: 0px;
 }
 
-.header {
-  padding: 1rem 0 1rem 1rem;
+.header-custom {
+  padding: 1rem;
   margin-bottom: 1rem;
   color: white;
   border-bottom: 1px solid rgba(34, 36, 38, 0.15);
@@ -36,6 +36,10 @@
   margin-top: 0 !important;
 }
 
+.no-margin {
+  margin: 0px !important;
+}
+
 .align-right {
   text-align: right;
 }
@@ -46,4 +50,12 @@
 
 .red {
   color: red;
+}
+
+.white {
+  color: white !important;
+}
+
+.white:hover {
+  text-decoration: underline !important;
 }

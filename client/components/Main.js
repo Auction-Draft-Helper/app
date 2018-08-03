@@ -6,16 +6,18 @@ import Header from "./Header";
 import Search from "./Search";
 import NominatedPlayer from "./NominatedPlayer";
 import RightMenu from "./RightMenu";
+import About from "./About";
 
 class Main extends Component {
   render() {
     return (
       <Provider store={store}>
         <div>
-          <div className="header">
+          <div className="header-custom">
             <Header />
           </div>
           <div className="body">
+            <About />
             <div className="ui grid">
               <div className="five wide column">
                 <RightMenu />

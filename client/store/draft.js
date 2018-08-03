@@ -28,7 +28,8 @@ const initialState = {
   draftAmount: 0,
   draftAmountError: false,
   selectedTab: "Drafted Players",
-  targets: returnBestTeam(modelRedux.model)
+  targets: returnBestTeam(modelRedux.model),
+  aboutOn: true
 };
 
 const SEARCH_TERM_CHANGE = "SEARCH_TERM_CHANGE";
@@ -39,6 +40,7 @@ const CHANGE_DRAFT_AMOUNT_ERROR = "CHANGE_DRAFT_AMOUNT_ERROR";
 const DRAFT_PLAYER = "DRAFT_PLAYER";
 const DESELECT_PLAYER = "DESELECT_PLAYER";
 const TAB_SELECTION = "TAB_SELECTION";
+const ABOUT_TOGGLE = "ABOUT_TOGGLE";
 
 export const searchTermChange = searchTerm => ({
   type: SEARCH_TERM_CHANGE,
@@ -76,6 +78,10 @@ export const deselectPlayer = () => ({
 export const tabSelection = selectedTab => ({
   type: TAB_SELECTION,
   selectedTab
+});
+
+export const aboutToggle = () => ({
+  type: ABOUT_TOGGLE
 });
 
 export default function(state = initialState, action) {
@@ -119,6 +125,8 @@ export default function(state = initialState, action) {
       return Object.assign({}, state, { nominatedPlayer: {}, draftAmount: 0 });
     case TAB_SELECTION:
       return Object.assign({}, state, { selectedTab: action.selectedTab });
+    case ABOUT_TOGGLE:
+      return Object.assign({}, state, { aboutOn: !state.aboutOn });
     default:
       return state;
   }

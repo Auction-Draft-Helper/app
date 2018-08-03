@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Todd Gurley II",
+    "val": 68
+  },
+  {
+    "name": "Le'Veon Bell",
+    "val": 66
+  },
+  {
+    "name": "Antonio Brown",
+    "val": 61
+  },
+  {
+    "name": "Ezekiel Elliott",
+    "val": 65
+  },
+  {
+    "name": "David Johnson",
+    "val": 63
+  },
+  {
+    "name": "Alvin Kamara",
+    "val": 61
+  },
+  {
+    "name": "DeAndre Hopkins",
+    "val": 56
+  },
+  {
+    "name": "Saquon Barkley",
+    "val": 54
+  },
+  {
+    "name": "Odell Beckham Jr.",
+    "val": 54
+  },
+  {
+    "name": "Kareem Hunt",
+    "val": 56
+  },
+  {
+    "name": "Julio Jones",
+    "val": 51
+  },
+  {
+    "name": "Melvin Gordon",
+    "val": 54
+  },
+  {
+    "name": "Michael Thomas",
+    "val": 45
+  },
+  {
+    "name": "Leonard Fournette",
+    "val": 49
+  },
+  {
+    "name": "Dalvin Cook",
+    "val": 47
+  },
+  {
+    "name": "Keenan Allen",
+    "val": 41
+  },
+  {
+    "name": "Davante Adams",
+    "val": 40
+  },
+  {
+    "name": "A.J. Green",
+    "val": 38
+  },
+  {
+    "name": "Rob Gronkowski",
+    "val": 35
+  },
+  {
+    "name": "Aaron Rodgers",
+    "val": 26
+  },
+  {
+    "name": "Devonta Freeman",
+    "val": 38
+  },
+  {
+    "name": "Doug Baldwin",
+    "val": 29
+  },
+  {
+    "name": "LeSean McCoy",
+    "val": 33
+  },
+  {
+    "name": "Mike Evans",
+    "val": 31
+  },
+  {
+    "name": "Travis Kelce",
+    "val": 30
+  },
+  {
+    "name": "Adam Thielen",
+    "val": 26
+  },
+  {
+    "name": "Jerick McKinnon",
+    "val": 29
+  },
+  {
+    "name": "Christian McCaffrey",
+    "val": 30
+  },
+  {
+    "name": "Tyreek Hill",
+    "val": 25
+  },
+  {
+    "name": "Jordan Howard",
+    "val": 29
+  },
+  {
+    "name": "Zach Ertz",
+    "val": 22
+  },
+  {
+    "name": "Tom Brady",
+    "val": 16
+  },
+  {
+    "name": "Kenyan Drake",
+    "val": 21
+  },
+  {
+    "name": "Stefon Diggs",
+    "val": 16
+  },
+  {
+    "name": "Deshaun Watson",
+    "val": 16
+  },
+  {
+    "name": "Alshon Jeffery",
+    "val": 19
+  },
+  {
+    "name": "Joe Mixon",
+    "val": 20
+  },
+  {
+    "name": "Amari Cooper",
+    "val": 14
+  },
+  {
+    "name": "Josh Gordon",
+    "val": 19
+  },
+  {
+    "name": "Russell Wilson",
+    "val": 15
+  },
+  {
+    "name": "JuJu Smith-Schuster",
+    "val": 13
+  },
+  {
+    "name": "T.Y. Hilton",
+    "val": 13
+  },
+  {
+    "name": "Larry Fitzgerald",
+    "val": 13
+  },
+  {
+    "name": "Jimmy Graham",
+    "val": 12
+  },
+  {
+    "name": "Derrius Guice",
+    "val": 10
+  },
+  {
+    "name": "Jay Ajayi",
+    "val": 12
+  },
+  {
+    "name": "Demaryius Thomas",
+    "val": 11
+  },
+  {
+    "name": "Alex Collins",
+    "val": 11
+  },
+  {
+    "name": "Derrick Henry",
+    "val": 24
+  },
+  {
+    "name": "Drew Brees",
+    "val": 9
+  },
+  {
+    "name": "Allen Robinson II",
+    "val": 10
+  },
+  {
+    "name": "Rashaad Penny",
+    "val": 10
+  },
+  {
+    "name": "Evan Engram",
+    "val": 10
+  },
+  {
+    "name": "Greg Olsen",
+    "val": 8
+  },
+  {
+    "name": "Golden Tate",
+    "val": 9
+  },
+  {
+    "name": "Brandin Cooks",
+    "val": 9
+  },
+  {
+    "name": "Cam Newton",
+    "val": 6
+  },
+  {
+    "name": "Carson Wentz",
+    "val": 7
+  },
+  {
+    "name": "Jacksonville",
+    "val": 8
+  },
+  {
+    "name": "Mark Ingram",
+    "val": 30
+  },
+  {
+    "name": "Jimmy Garoppolo",
+    "val": 6
+  },
+  {
+    "name": "Kyle Rudolph",
+    "val": 4
+  },
+  {
+    "name": "Marvin Jones Jr.",
+    "val": 6
+  },
+  {
+    "name": "Ronald Jones II",
+    "val": 8
+  },
+  {
+    "name": "Delanie Walker",
+    "val": 5
+  },
+  {
+    "name": "Jarvis Landry",
+    "val": 5
+  },
+  {
+    "name": "Kirk Cousins",
+    "val": 4
+  },
+  {
+    "name": "Dion Lewis",
+    "val": 6
+  },
+  {
+    "name": "Philadelphia",
+    "val": 4
+  },
+  {
+    "name": "Lamar Miller",
+    "val": 7
+  },
+  {
+    "name": "Robert Woods",
+    "val": 6
+  },
+  {
+    "name": "Sony Michel",
+    "val": 7
+  },
+  {
+    "name": "Minnesota",
+    "val": 3
+  },
+  {
+    "name": "Los Angeles",
+    "val": 4
+  },
+  {
+    "name": "Stephen Gostkowski",
+    "val": 3
+  },
+  {
+    "name": "Greg Zuerlein",
+    "val": 3
+  },
+  {
+    "name": "Marshawn Lynch",
+    "val": 4
+  },
+  {
+    "name": "Denver",
+    "val": 2
+  },
+  {
+    "name": "Hunter Henry",
+    "val": 1
+  },
+  {
+    "name": "Tevin Coleman",
+    "val": 5
+  },
+  {
+    "name": "Devin Funchess",
+    "val": 4
+  },
+  {
+    "name": "Trey Burton",
+    "val": 3
+  },
+  {
+    "name": "Justin Tucker",
+    "val": 2
+  },
+  {
+    "name": "Michael Crabtree",
+    "val": 3
+  },
+  {
+    "name": "Jared Goff",
+    "val": 3
+  },
+  {
+    "name": "Chris Hogan",
+    "val": 3
+  },
+  {
+    "name": "Royce Freeman",
+    "val": 5
+  },
+  {
+    "name": "Houston",
+    "val": 1
+  },
+  {
+    "name": "Matthew Stafford",
+    "val": 3
+  },
+  {
+    "name": "Will Fuller V",
+    "val": 3
+  },
+  {
+    "name": "Corey Davis",
+    "val": 3
+  },
+  {
+    "name": "Pierre Garcon",
+    "val": 2
+  },
+  {
+    "name": "Rex Burkhead",
+    "val": 6
+  },
+  {
+    "name": "Aaron Jones",
+    "val": 3
+  },
+  {
+    "name": "Marlon Mack",
+    "val": 3
+  },
+  {
+    "name": "Matt Bryant",
+    "val": 1
+  },
+  {
+    "name": "Jordan Reed",
+    "val": 2
+  },
+  {
+    "name": "Los Angeles",
+    "val": 2
+  },
+  {
+    "name": "Ben Roethlisberger",
+    "val": 2
+  },
+  {
+    "name": "Julian Edelman",
+    "val": 5
+  },
+  {
+    "name": "Jamison Crowder",
+    "val": 2
+  },
+  {
+    "name": "Jordy Nelson",
+    "val": 2
+  },
+  {
+    "name": "Sammy Watkins",
+    "val": 3
+  },
+  {
+    "name": "Cooper Kupp",
+    "val": 1
+  },
+  {
+    "name": "Tarik Cohen",
+    "val": 3
+  },
+  {
+    "name": "Carlos Hyde",
+    "val": 2
+  },
+  {
+    "name": "Nelson Agholor",
+    "val": 2
+  },
+  {
+    "name": "Matt Ryan",
+    "val": 2
+  },
+  {
+    "name": "Dan Bailey",
+    "val": 1
+  },
+  {
+    "name": "Robby Anderson",
+    "val": 2
+  },
+  {
+    "name": "Emmanuel Sanders",
+    "val": 2
+  },
+  {
+    "name": "Chris Thompson",
+    "val": 2
+  },
+  {
+    "name": "Patrick Mahomes II",
+    "val": 2
+  },
+  {
+    "name": "Dez Bryant",
+    "val": 6
+  },
+  {
+    "name": "C.J. Anderson",
+    "val": 1
+  },
+  {
+    "name": "Duke Johnson Jr.",
+    "val": 2
+  },
+  {
+    "name": "Philip Rivers",
+    "val": 2
+  },
+  {
+    "name": "Wil Lutz",
+    "val": 1
+  },
+  {
+    "name": "Marquise Goodwin",
+    "val": 2
+  },
+  {
+    "name": "DeVante Parker",
+    "val": 2
+  },
+  {
+    "name": "Andrew Luck",
+    "val": 2
+  },
+  {
+    "name": "Tyrod Taylor",
+    "val": 2
+  },
+  {
+    "name": "Nick Chubb",
+    "val": 3
+  },
+  {
+    "name": "George Kittle",
+    "val": 1
+  },
+  {
+    "name": "Isaiah Crowell",
+    "val": 3
+  },
+  {
+    "name": "Jesse James",
+    "val": 1
+  },
+  {
+    "name": "Dak Prescott",
+    "val": 2
+  },
+  {
+    "name": "Kerryon Johnson",
+    "val": 2
+  },
+  {
+    "name": "Sterling Shepard",
+    "val": 1
+  },
+  {
+    "name": "Baker Mayfield",
+    "val": 1
+  },
+  {
+    "name": "Seattle",
+    "val": 1
+  },
+  {
+    "name": "Frank Gore",
+    "val": 1
+  },
+  {
+    "name": "Jake Elliott",
+    "val": 1
+  },
+  {
+    "name": "Samaje Perine",
+    "val": 1
+  },
+  {
+    "name": "Cole Beasley",
+    "val": 1
+  },
+  {
+    "name": "Jamaal Williams",
+    "val": 2
+  },
+  {
+    "name": "Danny Amendola",
+    "val": 1
+  },
+  {
+    "name": "Pittsburgh",
+    "val": 1
+  },
+  {
+    "name": "Baltimore",
+    "val": 1
+  },
+  {
+    "name": "Luke Willson",
+    "val": 0
+  },
+  {
+    "name": "LeGarrette Blount",
+    "val": 2
+  },
+  {
+    "name": "Eli Manning",
+    "val": 2
+  },
+  {
+    "name": "Harrison Butker",
+    "val": 1
+  },
+  {
+    "name": "Case Keenum",
+    "val": 1
+  },
+  {
+    "name": "Matt Prater",
+    "val": 1
+  },
+  {
+    "name": "Derek Carr",
+    "val": 2
+  },
+  {
+    "name": "Randall Cobb",
+    "val": 2
+  },
+  {
+    "name": "Ty Montgomery",
+    "val": 2
+  },
+  {
+    "name": "Andy Dalton",
+    "val": 4
+  },
+  {
+    "name": "O.J. Howard",
+    "val": 1
+  },
+  {
+    "name": "Chris Carson",
+    "val": 2
+  },
+  {
+    "name": "Marcus Mariota",
+    "val": 1
+  },
+  {
+    "name": "Latavius Murray",
+    "val": 1
+  },
+  {
+    "name": "Mitchell Trubisky",
+    "val": 1
+  },
+  {
+    "name": "Benjamin Watson",
+    "val": 1
+  },
+  {
+    "name": "Vernon Davis",
+    "val": 1
+  },
+  {
+    "name": "Dallas",
+    "val": 1
+  },
+  {
+    "name": "Calvin Ridley",
+    "val": 1
+  },
+  {
+    "name": "Oakland",
+    "val": 1
+  },
+  {
+    "name": "Hayden Hurst",
+    "val": 2
+  },
+  {
+    "name": "James White",
+    "val": 1
+  },
+  {
+    "name": "Ted Ginn Jr.",
+    "val": 1
+  },
+  {
+    "name": "San Francisco",
+    "val": 2
+  },
+  {
+    "name": "Corey Clement",
+    "val": 1
+  },
+  {
+    "name": "D'Onta Foreman",
+    "val": 2
+  },
+  {
+    "name": "Sebastian Janikowski",
+    "val": 1
+  },
+  {
+    "name": "Martavis Bryant",
+    "val": 2
+  },
+  {
+    "name": "Anthony Miller",
+    "val": 3
+  },
+  {
+    "name": "Blake Bortles",
+    "val": 2
+  },
+  {
+    "name": "Kelvin Benjamin",
+    "val": 2
+  },
+  {
+    "name": "Mohamed Sanu",
+    "val": 3
+  },
+  {
+    "name": "Bilal Powell",
+    "val": 1
+  },
+  {
+    "name": "Paul Richardson Jr.",
+    "val": 1
+  },
+  {
+    "name": "Allen Hurns",
+    "val": 1
+  },
+  {
+    "name": "Devontae Booker",
+    "val": 2
+  },
+  {
+    "name": "D.J. Moore",
+    "val": 1
+  },
+  {
+    "name": "Adam Vinatieri",
+    "val": 1
+  },
+  {
+    "name": "Mike Gesicki",
+    "val": 1
+  },
+  {
+    "name": "Giovani Bernard",
+    "val": 1
+  },
+  {
+    "name": "Stephen Hauschka",
+    "val": 0
+  },
+  {
+    "name": "Dede Westbrook",
+    "val": 1
+  },
+  {
+    "name": "Christian Kirk",
+    "val": 4
+  },
+  {
+    "name": "Cleveland",
+    "val": 1
+  },
+  {
+    "name": "Tyler Lockett",
+    "val": 2
+  },
+  {
+    "name": "DeMarco Murray",
+    "val": 1
+  },
+  {
+    "name": "Jameis Winston",
+    "val": 2
+  },
+  {
+    "name": "Doug Martin",
+    "val": 2
+  },
+  {
+    "name": "Jack Doyle",
+    "val": 1
+  },
+  {
+    "name": "Jake Butt",
+    "val": 1
+  },
+  {
+    "name": "New England",
+    "val": 1
+  },
+  {
+    "name": "DeSean Jackson",
+    "val": 1
+  },
+  {
+    "name": "Tyler Eifert",
+    "val": 1
+  },
+  {
+    "name": "Austin Seferian-Jenkins",
+    "val": 1
+  },
+  {
+    "name": "Spencer Ware",
+    "val": 1
+  },
+  {
+    "name": "Michael Gallup",
+    "val": 3
+  },
+  {
+    "name": "Jordan Matthews",
+    "val": 1
+  },
+  {
+    "name": "Kenny Golladay",
+    "val": 1
+  },
+  {
+    "name": "Vance McDonald",
+    "val": 1
+  },
+  {
+    "name": "Alex Smith",
+    "val": 1
+  },
+  {
+    "name": "Buffalo",
+    "val": 1
+  }
+]

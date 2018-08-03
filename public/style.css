@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  padding: 1rem 0 1rem 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  background-color: #0e6eb8;
+}
+
+.body {
+  margin: 0 1rem 0 1rem;
+}
+
+.player-list-item {
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  padding: 1rem 0 1rem 0 !important;
+}
+
+.bottom-border {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.top-margin {
+  margin: 1em 0 0 0 !important;
+}
+
+.bottom-margin {
+  margin: 0 0 1em 0 !important;
+}
+
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.right-margin {
+  margin-right: 0.25em !important;
+}
+
+.red {
+  color: red;
+}

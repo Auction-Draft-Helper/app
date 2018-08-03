@@ -20,7 +20,7 @@ class About extends Component {
             <ul className="list">
               <li>10 team leagues</li>
               <li>
-                Rosters comprised of 2 QBs, 2 RBs, 2 WRs, 1 TE, 1 RB/WR/TE Flex,
+                Rosters comprised of 2 QBs, 2 RBs, 2 WRs, 1 TE, 1 RB/WR/TE flex,
                 1 K, 1 DST, and 6 bench positions
               </li>
               <li>0.5 points per reception</li>

@@ -6,7 +6,6 @@ class MyTeam extends Component {
     const { myTeam } = this.props;
     return (
       <div className="bottom-margin">
-        <h4 className="bottom-border">My Team</h4>
         {myTeam.length ? (
           <div className="ui list">
             {myTeam.map(player => {

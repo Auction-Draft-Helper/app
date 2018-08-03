@@ -1,6 +1,15 @@
 import data from "../../data/players.json";
 import { ModelInstance, createPlayersObj } from "../../model";
-import solver from "javascript-lp-solver";
+import {
+  findPlayerById,
+  getMaxBid,
+  addPlayerToRemoved,
+  removePlayerFromModel,
+  removePlayerFromPlayersList,
+  addPlayerToDrafted,
+  adjustModelForDrafted,
+  returnBestTeam
+} from "./draftHelpers";
 
 const modelRedux = new ModelInstance(
   createPlayersObj(data),
@@ -17,7 +26,9 @@ const initialState = {
   removedPlayers: [],
   draftedPlayers: [],
   draftAmount: 0,
-  draftAmountError: false
+  draftAmountError: false,
+  selectedTab: "Drafted Players",
+  targets: returnBestTeam(modelRedux.model)
 };
 
 const SEARCH_TERM_CHANGE = "SEARCH_TERM_CHANGE";
@@ -27,6 +38,7 @@ const CHANGE_DRAFT_AMOUNT = "CHANGE_DRAFT_AMOUNT";
 const CHANGE_DRAFT_AMOUNT_ERROR = "CHANGE_DRAFT_AMOUNT_ERROR";
 const DRAFT_PLAYER = "DRAFT_PLAYER";
 const DESELECT_PLAYER = "DESELECT_PLAYER";
+const TAB_SELECTION = "TAB_SELECTION";
 
 export const searchTermChange = searchTerm => ({
   type: SEARCH_TERM_CHANGE,
@@ -61,104 +73,10 @@ export const deselectPlayer = () => ({
   type: DESELECT_PLAYER
 });
 
-const findPlayerById = (state, playerId) => {
-  for (let key in state.model.variables) {
-    if (state.model.variables[key].id === Number(playerId)) {
-      return state.model.variables[key];
-    }
-  }
-};
-
-const getBestTeam = model => solver.Solve(model);
-
-const getMaxBid = (state, player) => {
-  const avgVal = "avg. value";
-  const originalVal = player[avgVal];
-  const budget = state.model.constraints[avgVal].max;
-  let maxBid = 0;
-
-  if (getBestTeam(state.model)[player.name] === 1) {
-    for (let i = player[avgVal]; i <= budget; i++) {
-      state.model.variables[player.name][avgVal] = i;
-      if (getBestTeam(state.model)[player.name] === 1) {
-        maxBid = i;
-      } else {
-        state.model.variables[player.name][avgVal] = originalVal;
-        player["maxBid"] = maxBid;
-        break;
-      }
-    }
-  } else {
-    for (let i = player[avgVal]; i >= 1; i--) {
-      state.model.variables[player.name][avgVal] = i;
-      if (getBestTeam(state.model)[player.name] !== 1) {
-        maxBid = i;
-      } else {
-        state.model.variables[player.name][avgVal] = originalVal;
-        player["maxBid"] = maxBid;
-        break;
-      }
-    }
-  }
-  if (!player.maxBid) player.maxBid = "N/A";
-  return player;
-};
-
-const addPlayerToRemoved = (state, playerId) => {
-  let newArr = state.removedPlayers.slice();
-  let player = findPlayerById(state, playerId);
-  player.draftPosition = newArr.length + 1;
-  newArr.unshift(player);
-  return newArr;
-};
-
-const removePlayerFromModel = (state, playerId) => {
-  let player = findPlayerById(state, playerId);
-  let newModel = Object.assign({}, state.model);
-  delete newModel.constraints[player.name];
-  delete newModel.variables[player.name];
-  return newModel;
-};
-
-const removePlayerFromPlayersList = (state, playerId) => {
-  let player = findPlayerById(state, playerId);
-  return state.playersArr.filter(playerInFilter => {
-    if (playerInFilter.name !== player.name) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-};
-
-const addPlayerToDrafted = (state, playerId) => {
-  let newArr = state.draftedPlayers.slice();
-  let player = findPlayerById(state, playerId);
-  player.draftAmount = state.draftAmount;
-  newArr.push(player);
-  return newArr;
-};
-
-const adjustModelForDrafted = (state, playerId) => {
-  let newModel = Object.assign({}, state.model);
-  const avgVal = "avg. value";
-  const player = findPlayerById(state, playerId);
-  const budget = newModel.constraints[avgVal].max;
-  const position = player.position;
-  if (
-    player.position === "RB" ||
-    player.position === "WR" ||
-    player.position === "TE"
-  ) {
-    newModel.constraints[position].min--;
-    newModel.constraints.FLEX.max--;
-  }
-  newModel.constraints[avgVal].max = budget - state.draftAmount;
-  newModel.constraints[position].max--;
-  delete newModel.constraints[player.name];
-  delete newModel.variables[player.name];
-  return newModel;
-};
+export const tabSelection = selectedTab => ({
+  type: TAB_SELECTION,
+  selectedTab
+});
 
 export default function(state = initialState, action) {
   switch (action.type) {
@@ -179,7 +97,8 @@ export default function(state = initialState, action) {
         playersArr: removePlayerFromPlayersList(state, action.playerId),
         removedPlayers: addPlayerToRemoved(state, action.playerId),
         nominatedPlayer: {},
-        model: removePlayerFromModel(state, action.playerId)
+        model: removePlayerFromModel(state, action.playerId),
+        targets: returnBestTeam(state.model)
       });
     case CHANGE_DRAFT_AMOUNT:
       return Object.assign({}, state, { draftAmount: Number(action.amount) });
@@ -193,10 +112,13 @@ export default function(state = initialState, action) {
         playersArr: removePlayerFromPlayersList(state, action.playerId),
         removedPlayers: addPlayerToRemoved(state, action.playerId),
         model: adjustModelForDrafted(state, action.playerId),
+        targets: returnBestTeam(state.model),
         draftAmount: 0
       });
     case DESELECT_PLAYER:
       return Object.assign({}, state, { nominatedPlayer: {}, draftAmount: 0 });
+    case TAB_SELECTION:
+      return Object.assign({}, state, { selectedTab: action.selectedTab });
     default:
       return state;
   }

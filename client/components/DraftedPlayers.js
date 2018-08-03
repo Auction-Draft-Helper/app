@@ -6,7 +6,6 @@ class DraftedPlayers extends Component {
     const { removedPlayers } = this.props;
     return (
       <div>
-        <h4 className="bottom-border">Drafted Players</h4>
         {removedPlayers.length ? (
           <div className="ui list">
             {removedPlayers.map(player => {

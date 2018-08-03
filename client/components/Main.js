@@ -3,10 +3,9 @@ import { Provider } from "react-redux";
 import store from "../store/index";
 import PlayersList from "./PlayersList";
 import Header from "./Header";
-import MyTeam from "./MyTeam";
-import DraftedPlayers from "./DraftedPlayers";
 import Search from "./Search";
 import NominatedPlayer from "./NominatedPlayer";
+import RightMenu from "./RightMenu";
 
 class Main extends Component {
   render() {
@@ -18,11 +17,10 @@ class Main extends Component {
           </div>
           <div className="body">
             <div className="ui grid">
-              <div className="four wide column">
-                <MyTeam />
-                <DraftedPlayers />
+              <div className="five wide column">
+                <RightMenu />
               </div>
-              <div className="twelve wide column">
+              <div className="eleven wide column">
                 <Search />
                 <NominatedPlayer />
                 <PlayersList />

@@ -18,6 +18,8 @@ class PlayerRow extends Component {
               className="ui button"
               value={player.id}
               onClick={event => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
                 nominatePlayer(event.target.value);
               }}
             >

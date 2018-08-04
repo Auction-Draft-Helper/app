@@ -7,17 +7,35 @@ class Scoreboard extends Component {
     return (
       <div className="ui card full-width">
         <div className="content">
-          <div className="header">Scoreboard</div>
+          <div className="two column row">
+            <div className="left floated column">
+              <h3>Scoreboard</h3>
+            </div>
+            <div className="right floated right aligned column">
+              <div
+                className="mini ui icon button custom-circle"
+                data-tooltip="If you fall behind early that's OK.  The goal is to get the players on the target list and at good values."
+                data-position="right center"
+                data-inverted=""
+                data-variation="basic"
+              >
+                <i className="info icon" />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="content">
           <div className="ui horizontal statistics">
             <div className="statistic">
-              <div className="value">{Math.round(myTeamsPoints)}</div>
+              <div className="value">
+                {Math.round(myTeamsPoints).toLocaleString()}
+              </div>
               <div className="label">My Projected Points</div>
             </div>
+            <p />
             <div className="statistic">
               <div className="value">
-                {Math.round(opponentsTeamsPoints / 9)}
+                {Math.round(opponentsTeamsPoints / 9).toLocaleString()}
               </div>
               <div className="label">Avg. Opponent</div>
             </div>

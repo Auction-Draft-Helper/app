@@ -53,6 +53,10 @@ class NominatedPlayer extends Component {
                         Maximum Bid:
                         {maxBid.length > 2 ? " " + maxBid : " $" + maxBid}
                       </h2>
+                      <p>
+                        Avg. Auction Price:{" "}
+                        {" $" + nominatedPlayer["avg. value"]}
+                      </p>
                     </div>
                   </div>
                   <div className="one column row">

@@ -60,9 +60,11 @@ export const removePlayerFromModel = state => {
 };
 
 export const removePlayerFromPlayersList = state => {
-  let player = findPlayerById(state, state.nominatedPlayer.id);
   return state.playersArr.filter(playerInFilter => {
-    if (playerInFilter.name !== player.name) {
+    if (
+      playerInFilter.name !==
+      findPlayerById(state, state.nominatedPlayer.id).name
+    ) {
       return true;
     } else {
       return false;

@@ -64,6 +64,10 @@
   text-decoration: underline !important;
 }
 
+.custom-circle {
+  border-radius: 50% !important;
+}
+
 @media screen and (max-width: 400px) {
   .mobile-hide {
     display: none !important;

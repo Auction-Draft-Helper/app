@@ -43,24 +43,24 @@ export const getMaxBid = (state, player) => {
   return player;
 };
 
-export const addPlayerToRemoved = (state, playerId) => {
+export const addPlayerToRemoved = state => {
   let newArr = state.removedPlayers.slice();
-  let player = findPlayerById(state, playerId);
+  let player = findPlayerById(state, state.nominatedPlayer.id);
   player.draftPosition = newArr.length + 1;
   newArr.unshift(player);
   return newArr;
 };
 
-export const removePlayerFromModel = (state, playerId) => {
-  let player = findPlayerById(state, playerId);
+export const removePlayerFromModel = state => {
+  let player = findPlayerById(state, state.nominatedPlayer.id);
   let newModel = Object.assign({}, state.model);
   delete newModel.constraints[player.name];
   delete newModel.variables[player.name];
   return newModel;
 };
 
-export const removePlayerFromPlayersList = (state, playerId) => {
-  let player = findPlayerById(state, playerId);
+export const removePlayerFromPlayersList = state => {
+  let player = findPlayerById(state, state.nominatedPlayer.id);
   return state.playersArr.filter(playerInFilter => {
     if (playerInFilter.name !== player.name) {
       return true;
@@ -70,18 +70,18 @@ export const removePlayerFromPlayersList = (state, playerId) => {
   });
 };
 
-export const addPlayerToDrafted = (state, playerId) => {
+export const addPlayerToDrafted = state => {
   let newArr = state.draftedPlayers.slice();
-  let player = findPlayerById(state, playerId);
+  let player = findPlayerById(state, state.nominatedPlayer.id);
   player.draftAmount = state.draftAmount;
   newArr.push(player);
   return newArr;
 };
 
-export const adjustModelForDrafted = (state, playerId) => {
+export const adjustModelForDrafted = state => {
   let newModel = Object.assign({}, state.model);
   const avgVal = "avg. value";
-  const player = findPlayerById(state, playerId);
+  const player = findPlayerById(state, state.nominatedPlayer.id);
   const budget = newModel.constraints[avgVal].max;
   const position = player.position;
   if (
@@ -109,4 +109,14 @@ export const returnBestTeam = model => {
     }
   }
   return finalArr;
+};
+
+export const addToMyPoints = state => {
+  const player = findPlayerById(state, state.nominatedPlayer.id);
+  return state.myTeamsPoints + player.fpts;
+};
+
+export const addToOpponentsPoints = state => {
+  const player = findPlayerById(state, state.nominatedPlayer.id);
+  return state.opponentsTeamsPoints + player.fpts;
 };

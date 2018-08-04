@@ -22,11 +22,11 @@ class NominatedPlayer extends Component {
     } = this.props;
     const { maxBid } = nominatedPlayer;
 
-    const draftAmountCheck = playerId => {
+    const draftAmountCheck = () => {
       if (!draftAmount || String(draftAmount).length > 2) {
         changeDraftAmountError();
       } else {
-        draftPlayer(playerId);
+        draftPlayer();
       }
     };
 
@@ -71,19 +71,23 @@ class NominatedPlayer extends Component {
                       <button
                         type="submit"
                         value={draftAmount}
-                        value={nominatedPlayer.id}
-                        className="ui green button"
+                        className="ui animated green button"
                         onClick={event => draftAmountCheck(event.target.value)}
                       >
-                        Draft
+                        <div className="visible content">Draft</div>
+                        <div className="hidden content">
+                          <i className="gavel icon" />
+                        </div>
                       </button>
                       <button
                         type="submit"
-                        value={nominatedPlayer.id}
-                        className="ui red button"
-                        onClick={event => removePlayer(event.target.value)}
+                        className="ui animated red button"
+                        onClick={() => removePlayer()}
                       >
-                        Remove
+                        <div className="visible content white">Remove</div>
+                        <div className="hidden content">
+                          <i className="times circle icon white" />
+                        </div>
                       </button>
                       <button
                         className="ui button"
@@ -126,10 +130,10 @@ const mapState = state => ({
 });
 
 const mapDispatch = dispatch => ({
-  removePlayer: playerId => dispatch(removePlayer(playerId)),
+  removePlayer: () => dispatch(removePlayer()),
   changeDraftAmount: amount => dispatch(changeDraftAmount(amount)),
   changeDraftAmountError: () => dispatch(changeDraftAmountError()),
-  draftPlayer: playerId => dispatch(draftPlayer(playerId)),
+  draftPlayer: () => dispatch(draftPlayer()),
   deselectPlayer: () => dispatch(deselectPlayer())
 });
 

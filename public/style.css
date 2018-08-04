@@ -49,13 +49,23 @@
 }
 
 .red {
-  color: red;
+  color: #db2828 !important;
 }
 
 .white {
   color: white !important;
 }
 
+.full-width {
+  width: 100% !important;
+}
+
 .white:hover {
   text-decoration: underline !important;
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-hide {
+    display: none !important;
+  }
 }

@@ -5,7 +5,6 @@ import { aboutToggle } from "../store/draft";
 class About extends Component {
   render() {
     const { aboutOn, aboutToggle } = this.props;
-    console.log(aboutOn);
     return (
       <div className="bottom-margin">
         {aboutOn ? (

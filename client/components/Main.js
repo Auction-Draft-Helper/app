@@ -7,6 +7,7 @@ import Search from "./Search";
 import NominatedPlayer from "./NominatedPlayer";
 import RightMenu from "./RightMenu";
 import About from "./About";
+import Scoreboard from "./Scoreboard";
 
 class Main extends Component {
   render() {
@@ -19,23 +20,8 @@ class Main extends Component {
           <div className="body">
             <About />
             <div className="ui grid">
-              <div className="five wide column">
-                {/* <div className="ui statistics">
-                  <div class="statistic">
-                    <div class="value">
-                      <i className="user icon" />
-                      2,999
-                    </div>
-                    <div class="label">Your Points</div>
-                  </div>
-                  <div class="statistic">
-                    <div class="value">
-                      <i className="users icon" />
-                      2,000
-                    </div>
-                    <div class="label">Avg. Opponent's Points</div>
-                  </div>
-                </div> */}
+              <div className="five wide column mobile-hide">
+                <Scoreboard />
                 <RightMenu />
               </div>
               <div className="eleven wide column">

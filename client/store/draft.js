@@ -8,7 +8,9 @@ import {
   removePlayerFromPlayersList,
   addPlayerToDrafted,
   adjustModelForDrafted,
-  returnBestTeam
+  returnBestTeam,
+  addToMyPoints,
+  addToOpponentsPoints
 } from "./draftHelpers";
 
 const modelRedux = new ModelInstance(
@@ -29,7 +31,9 @@ const initialState = {
   draftAmountError: false,
   selectedTab: "Drafted Players",
   targets: returnBestTeam(modelRedux.model),
-  aboutOn: true
+  aboutOn: true,
+  myTeamsPoints: 0,
+  opponentsTeamsPoints: 0
 };
 
 const SEARCH_TERM_CHANGE = "SEARCH_TERM_CHANGE";
@@ -52,9 +56,8 @@ export const nominatePlayer = playerId => ({
   playerId
 });
 
-export const removePlayer = playerId => ({
-  type: REMOVE_PLAYER,
-  playerId
+export const removePlayer = () => ({
+  type: REMOVE_PLAYER
 });
 
 export const changeDraftAmount = amount => ({
@@ -62,9 +65,8 @@ export const changeDraftAmount = amount => ({
   amount
 });
 
-export const draftPlayer = playerId => ({
-  type: DRAFT_PLAYER,
-  playerId
+export const draftPlayer = () => ({
+  type: DRAFT_PLAYER
 });
 
 export const changeDraftAmountError = () => ({
@@ -100,10 +102,11 @@ export default function(state = initialState, action) {
       return Object.assign({}, state, {
         draftAmountError: false,
         draftAmount: 0,
-        playersArr: removePlayerFromPlayersList(state, action.playerId),
-        removedPlayers: addPlayerToRemoved(state, action.playerId),
+        opponentsTeamsPoints: addToOpponentsPoints(state),
+        playersArr: removePlayerFromPlayersList(state),
+        removedPlayers: addPlayerToRemoved(state),
         nominatedPlayer: {},
-        model: removePlayerFromModel(state, action.playerId),
+        model: removePlayerFromModel(state),
         targets: returnBestTeam(state.model)
       });
     case CHANGE_DRAFT_AMOUNT:
@@ -113,12 +116,13 @@ export default function(state = initialState, action) {
     case DRAFT_PLAYER:
       return Object.assign({}, state, {
         draftAmountError: false,
-        draftedPlayers: addPlayerToDrafted(state, action.playerId),
-        nominatedPlayer: {},
-        playersArr: removePlayerFromPlayersList(state, action.playerId),
-        removedPlayers: addPlayerToRemoved(state, action.playerId),
-        model: adjustModelForDrafted(state, action.playerId),
+        myTeamsPoints: addToMyPoints(state),
+        draftedPlayers: addPlayerToDrafted(state),
+        playersArr: removePlayerFromPlayersList(state),
+        removedPlayers: addPlayerToRemoved(state),
+        model: adjustModelForDrafted(state),
         targets: returnBestTeam(state.model),
+        nominatedPlayer: {},
         draftAmount: 0
       });
     case DESELECT_PLAYER:

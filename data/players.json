@@ -72,7 +72,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 0,
-    "avg. value": 9
+    "avg. value": 8
   },
   {
     "name": "Deshaun Watson",
@@ -87,7 +87,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 0,
-    "avg. value": 16
+    "avg. value": 15
   },
   {
     "name": "Carson Wentz",
@@ -117,7 +117,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 0,
-    "avg. value": 3
+    "avg. value": 2
   },
   {
     "name": "Kirk Cousins",
@@ -207,7 +207,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 0,
-    "avg. value": 6
+    "avg. value": 5
   },
   {
     "name": "Philip Rivers",
@@ -582,7 +582,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 0,
-    "avg. value": 1
+    "avg. value": 2
   },
   {
     "name": "Nick Foles",
@@ -1125,7 +1125,7 @@
     "avg. value": 1
   },
   {
-    "name": "Kyle Lauletta",
+    "name": "Alex McGough",
     "fpts": 0.1,
     "catches": 0,
     "position": "QB",
@@ -1140,7 +1140,7 @@
     "avg. value": 1
   },
   {
-    "name": "Luke Falk",
+    "name": "Danny Etling",
     "fpts": 0.1,
     "catches": 0,
     "position": "QB",
@@ -1155,7 +1155,7 @@
     "avg. value": 1
   },
   {
-    "name": "Logan Woodside",
+    "name": "Garrett Gilbert",
     "fpts": 0.1,
     "catches": 0,
     "position": "QB",
@@ -1170,7 +1170,7 @@
     "avg. value": 1
   },
   {
-    "name": "Alex McGough",
+    "name": "Tanner Lee",
     "fpts": 0.1,
     "catches": 0,
     "position": "QB",
@@ -1185,7 +1185,7 @@
     "avg. value": 1
   },
   {
-    "name": "Danny Etling",
+    "name": "Kyle Lauletta",
     "fpts": 0.1,
     "catches": 0,
     "position": "QB",
@@ -1200,7 +1200,7 @@
     "avg. value": 1
   },
   {
-    "name": "Garrett Gilbert",
+    "name": "Luke Falk",
     "fpts": 0.1,
     "catches": 0,
     "position": "QB",
@@ -1215,7 +1215,7 @@
     "avg. value": 1
   },
   {
-    "name": "Tanner Lee",
+    "name": "Logan Woodside",
     "fpts": 0.1,
     "catches": 0,
     "position": "QB",
@@ -1230,7 +1230,7 @@
     "avg. value": 1
   },
   {
-    "name": "Alex Tanney",
+    "name": "Bryce Petty",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1245,7 +1245,7 @@
     "avg. value": 1
   },
   {
-    "name": "Drew Stanton",
+    "name": "Joe Callahan",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1260,7 +1260,7 @@
     "avg. value": 1
   },
   {
-    "name": "Joe Webb",
+    "name": "Taysom Hill",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1275,7 +1275,7 @@
     "avg. value": 1
   },
   {
-    "name": "Matt McGloin",
+    "name": "Jameill Showers",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1290,7 +1290,7 @@
     "avg. value": 1
   },
   {
-    "name": "Nate Sudfeld",
+    "name": "Alex Tanney",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1305,7 +1305,7 @@
     "avg. value": 1
   },
   {
-    "name": "Tyler Bray",
+    "name": "Drew Stanton",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1320,7 +1320,7 @@
     "avg. value": 1
   },
   {
-    "name": "Cardale Jones",
+    "name": "Joe Webb",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1335,7 +1335,7 @@
     "avg. value": 1
   },
   {
-    "name": "Mike Glennon",
+    "name": "Matt McGloin",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1350,7 +1350,7 @@
     "avg. value": 1
   },
   {
-    "name": "Bryce Petty",
+    "name": "Nate Sudfeld",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1365,7 +1365,7 @@
     "avg. value": 1
   },
   {
-    "name": "Joe Callahan",
+    "name": "Tyler Bray",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1380,7 +1380,7 @@
     "avg. value": 1
   },
   {
-    "name": "Taysom Hill",
+    "name": "Cardale Jones",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1395,7 +1395,7 @@
     "avg. value": 1
   },
   {
-    "name": "Jameill Showers",
+    "name": "Mike Glennon",
     "fpts": 0,
     "catches": 0,
     "position": "QB",
@@ -1527,7 +1527,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 49
+    "avg. value": 50
   },
   {
     "name": "Saquon Barkley",
@@ -1587,7 +1587,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 30
+    "avg. value": 31
   },
   {
     "name": "Jerick McKinnon",
@@ -1662,7 +1662,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 24
+    "avg. value": 23
   },
   {
     "name": "Alex Collins",
@@ -1722,7 +1722,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 21
+    "avg. value": 22
   },
   {
     "name": "Lamar Miller",
@@ -1741,8 +1741,8 @@
   },
   {
     "name": "Mark Ingram",
-    "fpts": 152.95,
-    "catches": 33.5,
+    "fpts": 149.9,
+    "catches": 32.8,
     "position": "RB",
     "id": 117,
     "QB": 0,
@@ -1752,7 +1752,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 30
+    "avg. value": 29
   },
   {
     "name": "Tevin Coleman",
@@ -1842,7 +1842,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 7
+    "avg. value": 6
   },
   {
     "name": "Marlon Mack",
@@ -1872,7 +1872,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 8
+    "avg. value": 7
   },
   {
     "name": "Isaiah Crowell",
@@ -2007,7 +2007,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 3
+    "avg. value": 2
   },
   {
     "name": "Ty Montgomery",
@@ -2112,7 +2112,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 1
+    "avg. value": 2
   },
   {
     "name": "Nick Chubb",
@@ -2292,7 +2292,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 3
+    "avg. value": 2
   },
   {
     "name": "Peyton Barber",
@@ -4047,7 +4047,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 56
+    "avg. value": 57
   },
   {
     "name": "Julio Jones",
@@ -4110,9 +4110,9 @@
     "avg. value": 45
   },
   {
-    "name": "Davante Adams",
-    "fpts": 204.5,
-    "catches": 84.6,
+    "name": "A.J. Green",
+    "fpts": 205.7,
+    "catches": 86,
     "position": "WR",
     "id": 275,
     "QB": 0,
@@ -4122,12 +4122,12 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 40
+    "avg. value": 38
   },
   {
-    "name": "A.J. Green",
-    "fpts": 204.4,
-    "catches": 85.2,
+    "name": "Davante Adams",
+    "fpts": 204.5,
+    "catches": 84.6,
     "position": "WR",
     "id": 276,
     "QB": 0,
@@ -4137,7 +4137,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 38
+    "avg. value": 40
   },
   {
     "name": "Mike Evans",
@@ -4182,7 +4182,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 25
+    "avg. value": 26
   },
   {
     "name": "Doug Baldwin",
@@ -4197,7 +4197,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 29
+    "avg. value": 30
   },
   {
     "name": "Amari Cooper",
@@ -4242,7 +4242,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 16
+    "avg. value": 17
   },
   {
     "name": "Demaryius Thomas",
@@ -4347,7 +4347,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 9
+    "avg. value": 8
   },
   {
     "name": "Josh Gordon",
@@ -4362,7 +4362,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 19
+    "avg. value": 20
   },
   {
     "name": "Marvin Jones",
@@ -4380,26 +4380,11 @@
     "avg. value": 6
   },
   {
-    "name": "Chris Hogan",
-    "fpts": 149.55,
-    "catches": 57.7,
-    "position": "WR",
-    "id": 293,
-    "QB": 0,
-    "RB": 0,
-    "WR": 1,
-    "TE": 0,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 3
-  },
-  {
     "name": "Devin Funchess",
     "fpts": 149.3,
     "catches": 58.8,
     "position": "WR",
-    "id": 294,
+    "id": 293,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -4413,6 +4398,21 @@
     "name": "Michael Crabtree",
     "fpts": 157,
     "catches": 74.6,
+    "position": "WR",
+    "id": 294,
+    "QB": 0,
+    "RB": 0,
+    "WR": 1,
+    "TE": 0,
+    "K": 0,
+    "DST": 0,
+    "FLEX": 1,
+    "avg. value": 3
+  },
+  {
+    "name": "Chris Hogan",
+    "fpts": 147.65,
+    "catches": 56.9,
     "position": "WR",
     "id": 295,
     "QB": 0,
@@ -4512,7 +4512,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 5
+    "avg. value": 6
   },
   {
     "name": "Robert Woods",
@@ -4740,26 +4740,11 @@
     "avg. value": 1
   },
   {
-    "name": "Julian Edelman",
-    "fpts": 126.85,
-    "catches": 61.7,
-    "position": "WR",
-    "id": 317,
-    "QB": 0,
-    "RB": 0,
-    "WR": 1,
-    "TE": 0,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 5
-  },
-  {
     "name": "Tyrell Williams",
     "fpts": 118.6,
     "catches": 46,
     "position": "WR",
-    "id": 318,
+    "id": 317,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -4774,7 +4759,7 @@
     "fpts": 117.9,
     "catches": 45,
     "position": "WR",
-    "id": 319,
+    "id": 318,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -4783,6 +4768,21 @@
     "DST": 0,
     "FLEX": 1,
     "avg. value": 1
+  },
+  {
+    "name": "Julian Edelman",
+    "fpts": 125.05000000000001,
+    "catches": 60.7,
+    "position": "WR",
+    "id": 319,
+    "QB": 0,
+    "RB": 0,
+    "WR": 1,
+    "TE": 0,
+    "K": 0,
+    "DST": 0,
+    "FLEX": 1,
+    "avg. value": 5
   },
   {
     "name": "Mohamed Sanu",
@@ -4797,7 +4797,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 3
+    "avg. value": 2
   },
   {
     "name": "Allen Hurns",
@@ -4842,7 +4842,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 2
+    "avg. value": 1
   },
   {
     "name": "Josh Doctson",
@@ -5127,7 +5127,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 3
+    "avg. value": 2
   },
   {
     "name": "Zay Jones",
@@ -5157,7 +5157,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 3
+    "avg. value": 2
   },
   {
     "name": "Tre'Quan Smith",
@@ -5190,26 +5190,11 @@
     "avg. value": 1
   },
   {
-    "name": "Brandon LaFell",
-    "fpts": 81.9,
-    "catches": 41,
-    "position": "WR",
-    "id": 347,
-    "QB": 0,
-    "RB": 0,
-    "WR": 1,
-    "TE": 0,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 1
-  },
-  {
     "name": "J.J. Nelson",
     "fpts": 77.3,
     "catches": 31.8,
     "position": "WR",
-    "id": 348,
+    "id": 347,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5224,7 +5209,7 @@
     "fpts": 78.8,
     "catches": 35.6,
     "position": "WR",
-    "id": 349,
+    "id": 348,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5239,7 +5224,7 @@
     "fpts": 79.4,
     "catches": 38,
     "position": "WR",
-    "id": 350,
+    "id": 349,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5253,6 +5238,21 @@
     "name": "Chris Godwin",
     "fpts": 77.25,
     "catches": 33.9,
+    "position": "WR",
+    "id": 350,
+    "QB": 0,
+    "RB": 0,
+    "WR": 1,
+    "TE": 0,
+    "K": 0,
+    "DST": 0,
+    "FLEX": 1,
+    "avg. value": 1
+  },
+  {
+    "name": "John Ross",
+    "fpts": 76.9,
+    "catches": 34.6,
     "position": "WR",
     "id": 351,
     "QB": 0,
@@ -5280,11 +5280,26 @@
     "avg. value": 1
   },
   {
+    "name": "Brandon LaFell",
+    "fpts": 78.05,
+    "catches": 38.1,
+    "position": "WR",
+    "id": 353,
+    "QB": 0,
+    "RB": 0,
+    "WR": 1,
+    "TE": 0,
+    "K": 0,
+    "DST": 0,
+    "FLEX": 1,
+    "avg. value": 1
+  },
+  {
     "name": "Geronimo Allison",
     "fpts": 76.1,
     "catches": 34.8,
     "position": "WR",
-    "id": 353,
+    "id": 354,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5299,7 +5314,7 @@
     "fpts": 74.9,
     "catches": 32.8,
     "position": "WR",
-    "id": 354,
+    "id": 355,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5314,7 +5329,7 @@
     "fpts": 73.9,
     "catches": 31.6,
     "position": "WR",
-    "id": 355,
+    "id": 356,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5329,7 +5344,7 @@
     "fpts": 75.5,
     "catches": 35.6,
     "position": "WR",
-    "id": 356,
+    "id": 357,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5344,7 +5359,7 @@
     "fpts": 78.1,
     "catches": 41.4,
     "position": "WR",
-    "id": 357,
+    "id": 358,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5359,7 +5374,7 @@
     "fpts": 73.1,
     "catches": 34.6,
     "position": "WR",
-    "id": 358,
+    "id": 359,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5367,14 +5382,14 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 4
+    "avg. value": 1
   },
   {
     "name": "Willie Snead",
     "fpts": 75.25,
     "catches": 39.1,
     "position": "WR",
-    "id": 359,
+    "id": 360,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5388,21 +5403,6 @@
     "name": "Adam Humphries",
     "fpts": 76.5,
     "catches": 43,
-    "position": "WR",
-    "id": 360,
-    "QB": 0,
-    "RB": 0,
-    "WR": 1,
-    "TE": 0,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 1
-  },
-  {
-    "name": "John Ross",
-    "fpts": 70.5,
-    "catches": 31.4,
     "position": "WR",
     "id": 361,
     "QB": 0,
@@ -5595,26 +5595,11 @@
     "avg. value": 1
   },
   {
-    "name": "Malcolm Mitchell",
-    "fpts": 46.75,
-    "catches": 20.3,
-    "position": "WR",
-    "id": 374,
-    "QB": 0,
-    "RB": 0,
-    "WR": 1,
-    "TE": 0,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 1
-  },
-  {
     "name": "Chad Williams",
     "fpts": 47.050000000000004,
     "catches": 22.7,
     "position": "WR",
-    "id": 375,
+    "id": 374,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5629,7 +5614,7 @@
     "fpts": 46.3,
     "catches": 21.4,
     "position": "WR",
-    "id": 376,
+    "id": 375,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5640,11 +5625,11 @@
     "avg. value": 1
   },
   {
-    "name": "Kenny Britt",
-    "fpts": 45.1,
-    "catches": 19,
+    "name": "Malcolm Mitchell",
+    "fpts": 44.85,
+    "catches": 19.3,
     "position": "WR",
-    "id": 377,
+    "id": 376,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5658,6 +5643,21 @@
     "name": "Curtis Samuel",
     "fpts": 46.25,
     "catches": 22.5,
+    "position": "WR",
+    "id": 377,
+    "QB": 0,
+    "RB": 0,
+    "WR": 1,
+    "TE": 0,
+    "K": 0,
+    "DST": 0,
+    "FLEX": 1,
+    "avg. value": 1
+  },
+  {
+    "name": "Kenny Britt",
+    "fpts": 44.3,
+    "catches": 18.6,
     "position": "WR",
     "id": 378,
     "QB": 0,
@@ -5820,9 +5820,9 @@
     "avg. value": 1
   },
   {
-    "name": "Cordarrelle Patterson",
-    "fpts": 35.65,
-    "catches": 13.1,
+    "name": "Tyler Boyd",
+    "fpts": 41.15,
+    "catches": 21.7,
     "position": "WR",
     "id": 389,
     "QB": 0,
@@ -5850,11 +5850,26 @@
     "avg. value": 1
   },
   {
-    "name": "Phillip Dorsett",
-    "fpts": 36.8,
-    "catches": 16,
+    "name": "Cordarrelle Patterson",
+    "fpts": 35.050000000000004,
+    "catches": 12.9,
     "position": "WR",
     "id": 391,
+    "QB": 0,
+    "RB": 0,
+    "WR": 1,
+    "TE": 0,
+    "K": 0,
+    "DST": 0,
+    "FLEX": 1,
+    "avg. value": 1
+  },
+  {
+    "name": "Phillip Dorsett",
+    "fpts": 35.6,
+    "catches": 15.4,
+    "position": "WR",
+    "id": 392,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5869,7 +5884,7 @@
     "fpts": 35.35,
     "catches": 15.9,
     "position": "WR",
-    "id": 392,
+    "id": 393,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5884,7 +5899,7 @@
     "fpts": 36.35,
     "catches": 18.7,
     "position": "WR",
-    "id": 393,
+    "id": 394,
     "QB": 0,
     "RB": 0,
     "WR": 1,
@@ -5898,21 +5913,6 @@
     "name": "Kevin White",
     "fpts": 34.8,
     "catches": 20,
-    "position": "WR",
-    "id": 394,
-    "QB": 0,
-    "RB": 0,
-    "WR": 1,
-    "TE": 0,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 1
-  },
-  {
-    "name": "Tyler Boyd",
-    "fpts": 33.3,
-    "catches": 17.2,
     "position": "WR",
     "id": 395,
     "QB": 0,
@@ -7816,8 +7816,8 @@
   },
   {
     "name": "Rob Gronkowski",
-    "fpts": 203.20000000000002,
-    "catches": 74.8,
+    "fpts": 199.5,
+    "catches": 73.2,
     "position": "TE",
     "id": 522,
     "QB": 0,
@@ -7827,7 +7827,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 35
+    "avg. value": 36
   },
   {
     "name": "Travis Kelce",
@@ -7887,7 +7887,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 10
+    "avg. value": 9
   },
   {
     "name": "Jimmy Graham",
@@ -7917,7 +7917,7 @@
     "K": 0,
     "DST": 0,
     "FLEX": 1,
-    "avg. value": 5
+    "avg. value": 4
   },
   {
     "name": "Kyle Rudolph",
@@ -7995,11 +7995,26 @@
     "avg. value": 1
   },
   {
+    "name": "Tyler Eifert",
+    "fpts": 99.8,
+    "catches": 44,
+    "position": "TE",
+    "id": 534,
+    "QB": 0,
+    "RB": 0,
+    "WR": 0,
+    "TE": 1,
+    "K": 0,
+    "DST": 0,
+    "FLEX": 1,
+    "avg. value": 1
+  },
+  {
     "name": "David Njoku",
     "fpts": 99.85,
     "catches": 45.3,
     "position": "TE",
-    "id": 534,
+    "id": 535,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -8014,7 +8029,7 @@
     "fpts": 99.3,
     "catches": 44.4,
     "position": "TE",
-    "id": 535,
+    "id": 536,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -8028,21 +8043,6 @@
     "name": "Charles Clay",
     "fpts": 103.05000000000001,
     "catches": 53.7,
-    "position": "TE",
-    "id": 536,
-    "QB": 0,
-    "RB": 0,
-    "WR": 0,
-    "TE": 1,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 1
-  },
-  {
-    "name": "Tyler Eifert",
-    "fpts": 97.2,
-    "catches": 43,
     "position": "TE",
     "id": 537,
     "QB": 0,
@@ -8340,9 +8340,9 @@
     "avg. value": 1
   },
   {
-    "name": "Blake Jarwin",
-    "fpts": 51.75,
-    "catches": 25.1,
+    "name": "Tyler Kroft",
+    "fpts": 52.25,
+    "catches": 25.7,
     "position": "TE",
     "id": 557,
     "QB": 0,
@@ -8355,9 +8355,9 @@
     "avg. value": 1
   },
   {
-    "name": "Tyler Kroft",
-    "fpts": 51.55,
-    "catches": 25.3,
+    "name": "Blake Jarwin",
+    "fpts": 51.75,
+    "catches": 25.1,
     "position": "TE",
     "id": 558,
     "QB": 0,
@@ -9795,26 +9795,11 @@
     "avg. value": 1
   },
   {
-    "name": "Hunter Henry",
-    "fpts": 0,
-    "catches": 0,
-    "position": "TE",
-    "id": 654,
-    "QB": 0,
-    "RB": 0,
-    "WR": 0,
-    "TE": 1,
-    "K": 0,
-    "DST": 0,
-    "FLEX": 1,
-    "avg. value": 1
-  },
-  {
     "name": "Stephen Gostkowski",
     "fpts": 137.1,
     "catches": 0,
     "position": "K",
-    "id": 655,
+    "id": 654,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9829,7 +9814,7 @@
     "fpts": 133.4,
     "catches": 0,
     "position": "K",
-    "id": 656,
+    "id": 655,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9844,7 +9829,7 @@
     "fpts": 132.9,
     "catches": 0,
     "position": "K",
-    "id": 657,
+    "id": 656,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9859,7 +9844,7 @@
     "fpts": 131.8,
     "catches": 0,
     "position": "K",
-    "id": 658,
+    "id": 657,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9874,7 +9859,7 @@
     "fpts": 131.4,
     "catches": 0,
     "position": "K",
-    "id": 659,
+    "id": 658,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9889,7 +9874,7 @@
     "fpts": 127.8,
     "catches": 0,
     "position": "K",
-    "id": 660,
+    "id": 659,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9904,7 +9889,7 @@
     "fpts": 126.9,
     "catches": 0,
     "position": "K",
-    "id": 661,
+    "id": 660,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9919,7 +9904,7 @@
     "fpts": 124.2,
     "catches": 0,
     "position": "K",
-    "id": 662,
+    "id": 661,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9934,7 +9919,7 @@
     "fpts": 124,
     "catches": 0,
     "position": "K",
-    "id": 663,
+    "id": 662,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9949,7 +9934,7 @@
     "fpts": 122.7,
     "catches": 0,
     "position": "K",
-    "id": 664,
+    "id": 663,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9964,7 +9949,7 @@
     "fpts": 121.1,
     "catches": 0,
     "position": "K",
-    "id": 665,
+    "id": 664,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9979,7 +9964,7 @@
     "fpts": 118.8,
     "catches": 0,
     "position": "K",
-    "id": 666,
+    "id": 665,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -9994,7 +9979,7 @@
     "fpts": 118,
     "catches": 0,
     "position": "K",
-    "id": 667,
+    "id": 666,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10009,7 +9994,7 @@
     "fpts": 117.1,
     "catches": 0,
     "position": "K",
-    "id": 668,
+    "id": 667,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10024,7 +10009,7 @@
     "fpts": 115.7,
     "catches": 0,
     "position": "K",
-    "id": 669,
+    "id": 668,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10039,7 +10024,7 @@
     "fpts": 112,
     "catches": 0,
     "position": "K",
-    "id": 670,
+    "id": 669,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10054,7 +10039,7 @@
     "fpts": 111.7,
     "catches": 0,
     "position": "K",
-    "id": 671,
+    "id": 670,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10069,7 +10054,7 @@
     "fpts": 111.5,
     "catches": 0,
     "position": "K",
-    "id": 672,
+    "id": 671,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10084,7 +10069,7 @@
     "fpts": 110.9,
     "catches": 0,
     "position": "K",
-    "id": 673,
+    "id": 672,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10099,7 +10084,7 @@
     "fpts": 109,
     "catches": 0,
     "position": "K",
-    "id": 674,
+    "id": 673,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10114,7 +10099,7 @@
     "fpts": 108.7,
     "catches": 0,
     "position": "K",
-    "id": 675,
+    "id": 674,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10129,7 +10114,7 @@
     "fpts": 108.4,
     "catches": 0,
     "position": "K",
-    "id": 676,
+    "id": 675,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10144,7 +10129,7 @@
     "fpts": 107.4,
     "catches": 0,
     "position": "K",
-    "id": 677,
+    "id": 676,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10159,7 +10144,7 @@
     "fpts": 106.7,
     "catches": 0,
     "position": "K",
-    "id": 678,
+    "id": 677,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10174,7 +10159,7 @@
     "fpts": 101,
     "catches": 0,
     "position": "K",
-    "id": 679,
+    "id": 678,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10189,7 +10174,7 @@
     "fpts": 100.9,
     "catches": 0,
     "position": "K",
-    "id": 680,
+    "id": 679,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10204,7 +10189,7 @@
     "fpts": 100.5,
     "catches": 0,
     "position": "K",
-    "id": 681,
+    "id": 680,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10219,7 +10204,7 @@
     "fpts": 99.8,
     "catches": 0,
     "position": "K",
-    "id": 682,
+    "id": 681,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10234,7 +10219,7 @@
     "fpts": 97.6,
     "catches": 0,
     "position": "K",
-    "id": 683,
+    "id": 682,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10249,7 +10234,7 @@
     "fpts": 97.5,
     "catches": 0,
     "position": "K",
-    "id": 684,
+    "id": 683,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10264,7 +10249,7 @@
     "fpts": 96,
     "catches": 0,
     "position": "K",
-    "id": 685,
+    "id": 684,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10279,7 +10264,7 @@
     "fpts": 93.9,
     "catches": 0,
     "position": "K",
-    "id": 686,
+    "id": 685,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10294,7 +10279,7 @@
     "fpts": 15.6,
     "catches": 0,
     "position": "K",
-    "id": 687,
+    "id": 686,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10309,7 +10294,7 @@
     "fpts": 11.8,
     "catches": 0,
     "position": "K",
-    "id": 688,
+    "id": 687,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10324,7 +10309,7 @@
     "fpts": 6.1,
     "catches": 0,
     "position": "K",
-    "id": 689,
+    "id": 688,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10339,7 +10324,7 @@
     "fpts": 3.8,
     "catches": 0,
     "position": "K",
-    "id": 690,
+    "id": 689,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10354,7 +10339,7 @@
     "fpts": null,
     "catches": null,
     "position": "K",
-    "id": 691,
+    "id": 690,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10369,7 +10354,7 @@
     "fpts": 119.3,
     "catches": 0,
     "position": "DST",
-    "id": 692,
+    "id": 691,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10377,14 +10362,14 @@
     "K": 0,
     "DST": 1,
     "FLEX": 0,
-    "avg. value": 8
+    "avg. value": 7
   },
   {
     "name": "Baltimore Ravens",
     "fpts": 119.3,
     "catches": 0,
     "position": "DST",
-    "id": 693,
+    "id": 692,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10399,7 +10384,7 @@
     "fpts": 118.9,
     "catches": 0,
     "position": "DST",
-    "id": 694,
+    "id": 693,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10414,6 +10399,21 @@
     "fpts": 117.1,
     "catches": 0,
     "position": "DST",
+    "id": 694,
+    "QB": 0,
+    "RB": 0,
+    "WR": 0,
+    "TE": 0,
+    "K": 0,
+    "DST": 1,
+    "FLEX": 0,
+    "avg. value": 1
+  },
+  {
+    "name": "Los Angeles Chargers",
+    "fpts": 115.5,
+    "catches": 0,
+    "position": "DST",
     "id": 695,
     "QB": 0,
     "RB": 0,
@@ -10422,29 +10422,14 @@
     "K": 0,
     "DST": 1,
     "FLEX": 0,
-    "avg. value": 2
-  },
-  {
-    "name": "Los Angeles Chargers",
-    "fpts": 115.5,
-    "catches": 0,
-    "position": "DST",
-    "id": 696,
-    "QB": 0,
-    "RB": 0,
-    "WR": 0,
-    "TE": 0,
-    "K": 0,
-    "DST": 1,
-    "FLEX": 0,
-    "avg. value": 2
+    "avg. value": 1
   },
   {
     "name": "Minnesota Vikings",
     "fpts": 114.8,
     "catches": 0,
     "position": "DST",
-    "id": 697,
+    "id": 696,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10459,7 +10444,7 @@
     "fpts": 113.2,
     "catches": 0,
     "position": "DST",
-    "id": 698,
+    "id": 697,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10474,7 +10459,7 @@
     "fpts": 112.4,
     "catches": 0,
     "position": "DST",
-    "id": 699,
+    "id": 698,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10489,7 +10474,7 @@
     "fpts": 108.2,
     "catches": 0,
     "position": "DST",
-    "id": 700,
+    "id": 699,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10504,7 +10489,7 @@
     "fpts": 107,
     "catches": 0,
     "position": "DST",
-    "id": 701,
+    "id": 700,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10519,7 +10504,7 @@
     "fpts": 106.5,
     "catches": 0,
     "position": "DST",
-    "id": 702,
+    "id": 701,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10534,7 +10519,7 @@
     "fpts": 105.7,
     "catches": 0,
     "position": "DST",
-    "id": 703,
+    "id": 702,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10549,7 +10534,7 @@
     "fpts": 105.2,
     "catches": 0,
     "position": "DST",
-    "id": 704,
+    "id": 703,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10564,7 +10549,7 @@
     "fpts": 104.8,
     "catches": 0,
     "position": "DST",
-    "id": 705,
+    "id": 704,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10579,7 +10564,7 @@
     "fpts": 104,
     "catches": 0,
     "position": "DST",
-    "id": 706,
+    "id": 705,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10594,7 +10579,7 @@
     "fpts": 102.7,
     "catches": 0,
     "position": "DST",
-    "id": 707,
+    "id": 706,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10609,7 +10594,7 @@
     "fpts": 102.1,
     "catches": 0,
     "position": "DST",
-    "id": 708,
+    "id": 707,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10624,7 +10609,7 @@
     "fpts": 101.9,
     "catches": 0,
     "position": "DST",
-    "id": 709,
+    "id": 708,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10639,7 +10624,7 @@
     "fpts": 101.8,
     "catches": 0,
     "position": "DST",
-    "id": 710,
+    "id": 709,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10654,7 +10639,7 @@
     "fpts": 100.6,
     "catches": 0,
     "position": "DST",
-    "id": 711,
+    "id": 710,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10669,7 +10654,7 @@
     "fpts": 99.8,
     "catches": 0,
     "position": "DST",
-    "id": 712,
+    "id": 711,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10684,7 +10669,7 @@
     "fpts": 96.9,
     "catches": 0,
     "position": "DST",
-    "id": 713,
+    "id": 712,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10699,7 +10684,7 @@
     "fpts": 95.5,
     "catches": 0,
     "position": "DST",
-    "id": 714,
+    "id": 713,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10714,7 +10699,7 @@
     "fpts": 93.8,
     "catches": 0,
     "position": "DST",
-    "id": 715,
+    "id": 714,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10729,7 +10714,7 @@
     "fpts": 91.1,
     "catches": 0,
     "position": "DST",
-    "id": 716,
+    "id": 715,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10744,7 +10729,7 @@
     "fpts": 89,
     "catches": 0,
     "position": "DST",
-    "id": 717,
+    "id": 716,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10759,7 +10744,7 @@
     "fpts": 85.7,
     "catches": 0,
     "position": "DST",
-    "id": 718,
+    "id": 717,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10774,7 +10759,7 @@
     "fpts": 85.4,
     "catches": 0,
     "position": "DST",
-    "id": 719,
+    "id": 718,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10789,7 +10774,7 @@
     "fpts": 84.4,
     "catches": 0,
     "position": "DST",
-    "id": 720,
+    "id": 719,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10804,7 +10789,7 @@
     "fpts": 79.8,
     "catches": 0,
     "position": "DST",
-    "id": 721,
+    "id": 720,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10819,7 +10804,7 @@
     "fpts": 79.7,
     "catches": 0,
     "position": "DST",
-    "id": 722,
+    "id": 721,
     "QB": 0,
     "RB": 0,
     "WR": 0,
@@ -10834,7 +10819,7 @@
     "fpts": null,
     "catches": null,
     "position": "DST",
-    "id": 723,
+    "id": 722,
     "QB": 0,
     "RB": 0,
     "WR": 0,

@@ -88,7 +88,9 @@ class NominatedPlayer extends Component {
                         className="ui animated red button"
                         onClick={() => removePlayer()}
                       >
-                        <div className="visible content white">Remove</div>
+                        <div className="visible content white custom-underline">
+                          Remove
+                        </div>
                         <div className="hidden content">
                           <i className="times circle icon white" />
                         </div>

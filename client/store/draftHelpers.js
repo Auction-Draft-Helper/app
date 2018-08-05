@@ -107,7 +107,7 @@ export const returnBestTeam = model => {
   const extras = ["result", "bounded", "feasible"];
   for (let key in obj) {
     if (obj.hasOwnProperty(key) && !extras.includes(key) && obj[key] > 0.5) {
-      finalArr.push(key);
+      finalArr.push(model.variables[key]);
     }
   }
   return finalArr;

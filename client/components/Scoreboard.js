@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class Scoreboard extends Component {
   render() {
-    const { myTeamsPoints, opponentsTeamsPoints } = this.props;
+    const { myTeamsPoints, opponentsTeamsPoints, remainingBudget } = this.props;
     return (
       <div className="ui card full-width">
         <div className="content">
@@ -14,7 +14,7 @@ class Scoreboard extends Component {
             <div className="right floated right aligned column">
               <div
                 className="mini ui icon button custom-circle"
-                data-tooltip="If you fall behind early that's OK.  The goal is to get the players on the target list and at good values."
+                data-tooltip="If you fall behind early it's OK - the goal is to get the players on the target list and at good values."
                 data-position="right center"
                 data-inverted=""
                 data-variation="basic"
@@ -25,6 +25,7 @@ class Scoreboard extends Component {
           </div>
         </div>
         <div className="content">
+          <p>Remaining budget: ${remainingBudget}</p>
           <div className="ui horizontal statistics">
             <div className="statistic">
               <div className="value">
@@ -48,7 +49,8 @@ class Scoreboard extends Component {
 
 const mapState = state => ({
   myTeamsPoints: state.draft.myTeamsPoints,
-  opponentsTeamsPoints: state.draft.opponentsTeamsPoints
+  opponentsTeamsPoints: state.draft.opponentsTeamsPoints,
+  remainingBudget: state.draft.model.constraints["avg. value"].max
 });
 
 export default connect(mapState)(Scoreboard);

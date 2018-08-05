@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import MyTeam from "./MyTeam";
 import DraftedPlayers from "./DraftedPlayers";
 import Targets from "./Targets";
+import Videos from "./Videos";
 
 class RightMenuDisplay extends Component {
   render() {
@@ -11,8 +12,10 @@ class RightMenuDisplay extends Component {
       return <MyTeam />;
     } else if (selectedTab === "Drafted Players") {
       return <DraftedPlayers />;
-    } else {
+    } else if (selectedTab === "Targets") {
       return <Targets />;
+    } else {
+      return <Videos />;
     }
   }
 }

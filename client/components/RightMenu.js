@@ -30,6 +30,12 @@ class RightMenu extends Component {
           >
             Targets
           </a>
+          <a
+            className={selectedTab === "Videos" ? "active item" : "item hide"}
+            onClick={() => tabSelection("Videos")}
+          >
+            Videos
+          </a>
         </div>
         <RightMenuDisplay />
       </div>

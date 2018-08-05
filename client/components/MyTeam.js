@@ -8,10 +8,12 @@ class MyTeam extends Component {
       <div className="bottom-margin">
         {myTeam.length ? (
           <div className="ui list">
-            {myTeam.map(player => {
+            {myTeam.map((player, index) => {
               return (
-                <div className="item">
-                  {player.name}, ${player.draftAmount}
+                <div className="item" key="player.id">
+                  {index + 1}. {player.name}, {player.position}, ${
+                    player.draftAmount
+                  }
                 </div>
               );
             })}

@@ -10,8 +10,8 @@ class DraftedPlayers extends Component {
           <div className="ui list">
             {removedPlayers.map(player => {
               return (
-                <div className="item">
-                  {player.draftPosition}. {player.name}
+                <div className="item" key={player.id}>
+                  {player.draftPosition}. {player.name}, {player.position}
                 </div>
               );
             })}

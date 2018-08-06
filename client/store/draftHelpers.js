@@ -11,6 +11,10 @@ export const findPlayerById = (state, playerId) => {
 export const getBestTeam = model => solver.Solve(model);
 
 export const getMaxBid = (state, player) => {
+  if (state.targets.length === 1) {
+    player.maxBid = state.model.constraints["avg. value"].max;
+    return player;
+  }
   const avgVal = "avg. value";
   const originalVal = player[avgVal];
   const budget = state.model.constraints[avgVal].max;
@@ -121,4 +125,10 @@ export const addToMyPoints = state => {
 export const addToOpponentsPoints = state => {
   const player = findPlayerById(state, state.nominatedPlayer.id);
   return state.opponentsTeamsPoints + player.fpts;
+};
+
+export const sortByAvgValue = playersArr => {
+  return playersArr.sort((playerA, playerB) => {
+    return playerB["avg. value"] - playerA["avg. value"];
+  });
 };

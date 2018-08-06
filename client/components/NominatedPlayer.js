@@ -30,6 +30,14 @@ class NominatedPlayer extends Component {
       }
     };
 
+    const maxBidFunc = playerMaxBid => {
+      if (maxBid.length > 2) {
+        return " " + playerMaxBid;
+      } else {
+        return " $" + playerMaxBid;
+      }
+    };
+
     return (
       <div className="bottom-border">
         <h4 className="top-margin">Nominated Player</h4>
@@ -51,10 +59,10 @@ class NominatedPlayer extends Component {
                     <div className="right floated column align-right">
                       <h2>
                         Maximum Bid:
-                        {maxBid.length > 2 ? " " + maxBid : " $" + maxBid}
+                        {maxBidFunc(maxBid)}
                       </h2>
                       <p>
-                        Avg. Auction Price:{" "}
+                        Avg. Auction Price:
                         {" $" + nominatedPlayer["avg. value"]}
                       </p>
                     </div>

@@ -10,7 +10,11 @@ import {
   adjustModelForDrafted,
   returnBestTeam,
   addToMyPoints,
-  addToOpponentsPoints
+  addToOpponentsPoints,
+  sortByAvgValue,
+  checkDraftedForUndo,
+  playersArrForUndo,
+  removedPlayersForUndo
 } from "./draftHelpers";
 
 const modelRedux = new ModelInstance(
@@ -20,9 +24,7 @@ const modelRedux = new ModelInstance(
 
 const initialState = {
   model: modelRedux.model,
-  playersArr: modelRedux.origArr.sort(
-    (playerA, playerB) => playerB["avg. value"] - playerA["avg. value"]
-  ),
+  playersArr: sortByAvgValue(modelRedux.origArr),
   searchTerm: "",
   nominatedPlayer: {},
   removedPlayers: [],
@@ -45,6 +47,7 @@ const DRAFT_PLAYER = "DRAFT_PLAYER";
 const DESELECT_PLAYER = "DESELECT_PLAYER";
 const TAB_SELECTION = "TAB_SELECTION";
 const ABOUT_TOGGLE = "ABOUT_TOGGLE";
+const UNDO_PREVIOUS_SELECTION = "UNDO_PREVIOUS_SELECTION";
 
 export const searchTermChange = searchTerm => ({
   type: SEARCH_TERM_CHANGE,
@@ -85,6 +88,8 @@ export const tabSelection = selectedTab => ({
 export const aboutToggle = () => ({
   type: ABOUT_TOGGLE
 });
+
+export const undoPreviousSelection = () => ({ type: UNDO_PREVIOUS_SELECTION });
 
 export default function(state = initialState, action) {
   switch (action.type) {
@@ -131,6 +136,12 @@ export default function(state = initialState, action) {
       return Object.assign({}, state, { selectedTab: action.selectedTab });
     case ABOUT_TOGGLE:
       return Object.assign({}, state, { aboutOn: !state.aboutOn });
+    case UNDO_PREVIOUS_SELECTION:
+      return Object.assign({}, state, {
+        draftedPlayers: checkDraftedForUndo(state),
+        playersArr: playersArrForUndo(state),
+        removedPlayers: removedPlayersForUndo
+      });
     default:
       return state;
   }

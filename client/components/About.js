@@ -10,16 +10,16 @@ class About extends Component {
         {aboutOn ? (
           <div className="ui yellow message">
             <i className="close icon" onClick={() => aboutToggle()} />
-            <div className="header">About Auction Draft Helper</div>
+            <div className="header">About Fantasy Auction Wizard</div>
             <p>
-              Welcome to Auction Draft Helper! Before you start, please note
+              Welcome to Fantasy Auction Wizard! Before you start, please note
               this site is optimized for standard Yahoo! auction leagues, but
               more specifically:
             </p>
             <ul className="list">
               <li>10 team leagues</li>
               <li>
-                Rosters comprised of 2 QBs, 2 RBs, 2 WRs, 1 TE, 1 RB/WR/TE flex,
+                Rosters comprised of 1 QB, 2 RBs, 2 WRs, 1 TE, 1 RB/WR/TE flex,
                 1 K, 1 DST, and 6 bench positions
               </li>
               <li>0.5 points per reception</li>

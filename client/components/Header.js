@@ -10,7 +10,8 @@ class Header extends Component {
         <div className="two column row">
           <div className="left floated column">
             <h1>
-              <i className="football ball icon" />Auction Draft Helper
+              <i className="football ball icon" />
+              Fantasy Auction Wizard
             </h1>
           </div>
           <div className="right floated column">

@@ -69,47 +69,49 @@ class NominatedPlayer extends Component {
                   </div>
 
                   <div className="right aligned sixteen wide column">
-                    <div className="ui icon input right-margin">
-                      <input
-                        type="text"
-                        name="bid-amount"
-                        placeholder="Drafted for..."
-                        onChange={event =>
-                          changeDraftAmount(event.target.value)
-                        }
-                      />
-                      <i className="dollar sign icon" />
+                    <div className="button-container">
+                      <div className="ui icon input right-margin">
+                        <input
+                          type="text"
+                          name="bid-amount"
+                          placeholder="Drafted for..."
+                          onChange={event =>
+                            changeDraftAmount(event.target.value)
+                          }
+                        />
+                        <i className="dollar sign icon" />
+                      </div>
+                      <button
+                        type="submit"
+                        value={draftAmount}
+                        className="ui animated green button"
+                        onClick={event => draftAmountCheck(event.target.value)}
+                      >
+                        <div className="visible content">Draft</div>
+                        <div className="hidden content">
+                          <i className="gavel icon" />
+                        </div>
+                      </button>
+                      <button
+                        type="submit"
+                        className="ui animated red button"
+                        onClick={() => removePlayer()}
+                      >
+                        <div className="visible content white custom-underline">
+                          Remove
+                        </div>
+                        <div className="hidden content">
+                          <i className="times circle icon white" />
+                        </div>
+                      </button>
+                      <button
+                        className="ui button"
+                        type="submit"
+                        onClick={() => deselectPlayer()}
+                      >
+                        Deselect
+                      </button>
                     </div>
-                    <button
-                      type="submit"
-                      value={draftAmount}
-                      className="ui animated green button"
-                      onClick={event => draftAmountCheck(event.target.value)}
-                    >
-                      <div className="visible content">Draft</div>
-                      <div className="hidden content">
-                        <i className="gavel icon" />
-                      </div>
-                    </button>
-                    <button
-                      type="submit"
-                      className="ui animated red button"
-                      onClick={() => removePlayer()}
-                    >
-                      <div className="visible content white custom-underline">
-                        Remove
-                      </div>
-                      <div className="hidden content">
-                        <i className="times circle icon white" />
-                      </div>
-                    </button>
-                    <button
-                      className="ui button"
-                      type="submit"
-                      onClick={() => deselectPlayer()}
-                    >
-                      Deselect
-                    </button>
                   </div>
 
                   {draftAmountError ? (

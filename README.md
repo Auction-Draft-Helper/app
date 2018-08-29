@@ -2,6 +2,8 @@
 
 Welcome to Fantasy Auction Wizard!  This is an application to be used alongside fantasy auctions which tells the user the maximum they should bid on a given player given everything that has happened in the draft.
 
+The application was built using Node, React and Redux.  Additionally, a core part of the application is the Linear Programming Module used to calculate maximmum bids, which is linked below.
+
 ## Data Sourcing
 
 The data for Fantasy Auction Wizard is aggregated in another application running locally on my machine in order to limit the size of FAW.  Data is updated every few days during draft season or whenever an event (injury, suspension, etc.) occurs.

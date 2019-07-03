@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { aboutToggle } from "../store/draft";
 
 class Header extends Component {
   render() {
-    const { aboutToggle } = this.props;
+    const { toggleAbout } = this.props;
     return (
       <div className="ui grid">
         <div className="two column row">
@@ -17,7 +15,7 @@ class Header extends Component {
           <div className="right floated column">
             <div className="ui text menu no-margin">
               <div className="right menu">
-                <a className="item white" onClick={() => aboutToggle()}>
+                <a className="item white" onClick={() => toggleAbout()}>
                   About
                 </a>
               </div>
@@ -29,11 +27,4 @@ class Header extends Component {
   }
 }
 
-const mapDispatch = dispatch => ({
-  aboutToggle: () => dispatch(aboutToggle())
-});
-
-export default connect(
-  null,
-  mapDispatch
-)(Header);
+export default Header;

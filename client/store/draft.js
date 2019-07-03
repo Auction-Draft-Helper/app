@@ -33,7 +33,6 @@ const initialState = {
   draftAmountError: false,
   selectedTab: "Drafted Players",
   targets: returnBestTeam(modelRedux.model),
-  aboutOn: true,
   myTeamsPoints: 0,
   opponentsTeamsPoints: 0
 };
@@ -46,7 +45,6 @@ const CHANGE_DRAFT_AMOUNT_ERROR = "CHANGE_DRAFT_AMOUNT_ERROR";
 const DRAFT_PLAYER = "DRAFT_PLAYER";
 const DESELECT_PLAYER = "DESELECT_PLAYER";
 const TAB_SELECTION = "TAB_SELECTION";
-const ABOUT_TOGGLE = "ABOUT_TOGGLE";
 const UNDO_PREVIOUS_SELECTION = "UNDO_PREVIOUS_SELECTION";
 
 export const searchTermChange = searchTerm => ({
@@ -83,10 +81,6 @@ export const deselectPlayer = () => ({
 export const tabSelection = selectedTab => ({
   type: TAB_SELECTION,
   selectedTab
-});
-
-export const aboutToggle = () => ({
-  type: ABOUT_TOGGLE
 });
 
 export const undoPreviousSelection = () => ({ type: UNDO_PREVIOUS_SELECTION });
@@ -134,8 +128,6 @@ export default function(state = initialState, action) {
       return Object.assign({}, state, { nominatedPlayer: {}, draftAmount: 0 });
     case TAB_SELECTION:
       return Object.assign({}, state, { selectedTab: action.selectedTab });
-    case ABOUT_TOGGLE:
-      return Object.assign({}, state, { aboutOn: !state.aboutOn });
     case UNDO_PREVIOUS_SELECTION:
       return Object.assign({}, state, {
         draftedPlayers: checkDraftedForUndo(state),

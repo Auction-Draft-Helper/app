@@ -8,7 +8,7 @@ const fs = require('fs'),
       TE = 'TE',
       K = 'K',
       DST = 'DST',
-      avg_cost = 'Avg Cost',
+      avgCost = 'Avg Cost',
       leagueSettings = {
         teams: 10,
         QB: 1,
@@ -27,10 +27,10 @@ const fs = require('fs'),
       tempArray = [],
       idCount = 0;
 
-  const { positions, flexPositions } = leagueSettings,
+  const { positions, flexPositions, teams } = leagueSettings,
         getPlayerName = (playerInfo) => playerInfo.split(' ').slice(0, -1).join(' '),
         getAuctionValue = (auctionPlayer) => {
-          return Math.round(Number(auctionPlayer[avg_cost].substring(1)))
+          return Math.round(Number(auctionPlayer[avgCost].substring(1)));
         };
 
   for(let i = 0; i < positions.length; i++) {
@@ -59,12 +59,12 @@ const fs = require('fs'),
           fpts: player.REC ? player.FPTS + (player.REC * 0.5) : player.FPTS,
           FLEX: flexPositions.includes(position) ? 1 : 0,
           id: idCount,
-          'avg. value': auctionPlayer ? getAuctionValue(auctionPlayer) : 1
+          'avg. value': auctionPlayer && position !== K ? getAuctionValue(auctionPlayer) : 1
         }
       }
     ).sort((playerA, playerB) => playerB.fpts - playerA.fpts)
 
-    let midPoint = leagueSettings.teams * leagueSettings[position] / 2,
+    let midPoint = teams * leagueSettings[position] / 2,
         medianPoints = (tempArray[midPoint].fpts + tempArray[midPoint - 1].fpts) / 2
 
     tempArray.forEach((player) => player.PAM = player.fpts - medianPoints)

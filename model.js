@@ -13,16 +13,16 @@ const createPlayersObj = playerArr => {
 class ModelInstance {
   constructor(obj, arr) {
     this.model = {
-      optimize: "fpts",
+      optimize: "PAM",
       opType: "max",
       constraints: {
-        QB: { max: 2 },
-        RB: { min: 5, max: 6 },
-        WR: { min: 4, max: 5 },
-        TE: { min: 1, max: 2 },
-        K: { max: 1 },
-        DST: { max: 1 },
-        FLEX: { max: 11 },
+        QB:   { min: 2, max: 2 },
+        RB:   { min: 5, max: 6 },
+        WR:   { min: 4, max: 5 },
+        TE:   { min: 1, max: 1 },
+        K:    { min: 1, max: 1 },
+        DST:  { min:1, max: 1 },
+        FLEX: { min: 11, max: 11 },
         "avg. value": { max: 200 }
       },
       variables: obj

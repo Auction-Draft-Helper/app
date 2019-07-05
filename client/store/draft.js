@@ -31,21 +31,21 @@ const initialState = {
   draftedPlayers: [],
   draftAmount: 0,
   draftAmountError: false,
-  selectedTab: "Drafted Players",
   targets: returnBestTeam(modelRedux.model),
   myTeamsPoints: 0,
   opponentsTeamsPoints: 0
 };
 
-const SEARCH_TERM_CHANGE = "SEARCH_TERM_CHANGE";
-const NOMINATE_PLAYER = "NOMINATE_PLAYER";
-const REMOVE_PLAYER = "REMOVE_PLAYER";
-const CHANGE_DRAFT_AMOUNT = "CHANGE_DRAFT_AMOUNT";
-const CHANGE_DRAFT_AMOUNT_ERROR = "CHANGE_DRAFT_AMOUNT_ERROR";
-const DRAFT_PLAYER = "DRAFT_PLAYER";
-const DESELECT_PLAYER = "DESELECT_PLAYER";
-const TAB_SELECTION = "TAB_SELECTION";
-const UNDO_PREVIOUS_SELECTION = "UNDO_PREVIOUS_SELECTION";
+//Actions
+
+const SEARCH_TERM_CHANGE = "SEARCH_TERM_CHANGE",
+      NOMINATE_PLAYER = "NOMINATE_PLAYER",
+      REMOVE_PLAYER = "REMOVE_PLAYER",
+      CHANGE_DRAFT_AMOUNT = "CHANGE_DRAFT_AMOUNT",
+      CHANGE_DRAFT_AMOUNT_ERROR = "CHANGE_DRAFT_AMOUNT_ERROR",
+      DRAFT_PLAYER = "DRAFT_PLAYER",
+      DESELECT_PLAYER = "DESELECT_PLAYER",
+      UNDO_PREVIOUS_SELECTION = "UNDO_PREVIOUS_SELECTION";
 
 export const searchTermChange = searchTerm => ({
   type: SEARCH_TERM_CHANGE,
@@ -76,11 +76,6 @@ export const changeDraftAmountError = () => ({
 
 export const deselectPlayer = () => ({
   type: DESELECT_PLAYER
-});
-
-export const tabSelection = selectedTab => ({
-  type: TAB_SELECTION,
-  selectedTab
 });
 
 export const undoPreviousSelection = () => ({ type: UNDO_PREVIOUS_SELECTION });
@@ -126,8 +121,6 @@ export default function(state = initialState, action) {
       });
     case DESELECT_PLAYER:
       return Object.assign({}, state, { nominatedPlayer: {}, draftAmount: 0 });
-    case TAB_SELECTION:
-      return Object.assign({}, state, { selectedTab: action.selectedTab });
     case UNDO_PREVIOUS_SELECTION:
       return Object.assign({}, state, {
         draftedPlayers: checkDraftedForUndo(state),

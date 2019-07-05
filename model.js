@@ -13,7 +13,7 @@ const createPlayersObj = playerArr => {
 class ModelInstance {
   constructor(obj, arr) {
     this.model = {
-      optimize: "PAM",
+      optimize: "PAR",
       opType: "max",
       constraints: {
         QB:   { min: 2, max: 2 },

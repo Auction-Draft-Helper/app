@@ -5,13 +5,13 @@ import PlayersList from "./PlayersList";
 import Header from "./Header";
 import Search from "./Search";
 import NominatedPlayer from "./NominatedPlayer";
-import RightMenu from "./RightMenu";
+import LeftMenu from "./LeftMenu";
 import About from "./About";
 import Scoreboard from "./Scoreboard";
 
 class Main extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state = {showAbout: true};
     this.toggleAbout = this.toggleAbout.bind(this);
   }
@@ -23,18 +23,19 @@ class Main extends Component {
   }
   
   render() {
+    const {toggleAbout, state} = this
     return (
       <Provider store={store}>
         <div>
           <div className="header-custom">
-            <Header toggleAbout={this.toggleAbout} />
+            <Header toggleAbout={toggleAbout} />
           </div>
           <div className="body">
-            {this.state.showAbout ? <About toggleAbout={this.toggleAbout} /> : <div />}
+            {state.showAbout ? <About toggleAbout={toggleAbout} /> : <div />}
             <div className="ui grid">
               <div className="five wide column mobile-hide">
                 <Scoreboard />
-                <RightMenu />
+                <LeftMenu />
               </div>
               <div className="eleven wide column">
                 <Search />

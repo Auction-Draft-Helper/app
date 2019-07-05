@@ -7,6 +7,7 @@ import {
   draftPlayer,
   deselectPlayer
 } from "../store/draft";
+import NominatedPlayerButton from './NominatedPlayerButton';
 
 class NominatedPlayer extends Component {
   render() {
@@ -20,21 +21,12 @@ class NominatedPlayer extends Component {
       draftPlayer,
       deselectPlayer
     } = this.props;
-    const { maxBid } = nominatedPlayer;
 
     const draftAmountCheck = () => {
       if (!draftAmount || String(draftAmount).length > 2) {
         changeDraftAmountError();
       } else {
         draftPlayer();
-      }
-    };
-
-    const maxBidFunc = playerMaxBid => {
-      if (maxBid.length > 2) {
-        return " " + playerMaxBid;
-      } else {
-        return " $" + playerMaxBid;
       }
     };
 
@@ -58,12 +50,10 @@ class NominatedPlayer extends Component {
                     </div>
                     <div className="right floated column align-right">
                       <h2>
-                        Maximum Bid:
-                        {maxBidFunc(maxBid)}
+                        Maximum Bid: ${nominatedPlayer.maxBid}
                       </h2>
                       <p>
-                        Avg. Auction Price:
-                        {" $" + nominatedPlayer["avg. value"]}
+                        Avg. Auction Price: ${nominatedPlayer["avg. value"]}
                       </p>
                     </div>
                   </div>
@@ -81,36 +71,27 @@ class NominatedPlayer extends Component {
                         />
                         <i className="dollar sign icon" />
                       </div>
-                      <button
-                        type="submit"
+                      <NominatedPlayerButton
                         value={draftAmount}
-                        className="ui animated green button"
-                        onClick={event => draftAmountCheck(event.target.value)}
-                      >
-                        <div className="visible content">Draft</div>
-                        <div className="hidden content">
-                          <i className="gavel icon" />
-                        </div>
-                      </button>
-                      <button
-                        type="submit"
-                        className="ui animated red button"
-                        onClick={() => removePlayer()}
-                      >
-                        <div className="visible content white custom-underline">
-                          Remove
-                        </div>
-                        <div className="hidden content">
-                          <i className="times circle icon white" />
-                        </div>
-                      </button>
-                      <button
-                        className="ui button"
-                        type="submit"
-                        onClick={() => deselectPlayer()}
-                      >
-                        Deselect
-                      </button>
+                        buttonClasses={"animated green"}
+                        clickFunction={draftAmountCheck}
+                        text={"Draft"}
+                        iconName={"gavel"}
+                      />
+                      <NominatedPlayerButton
+                        value={null}
+                        buttonClasses={"animated red"}
+                        clickFunction={removePlayer}
+                        iconName={"times circle"}
+                        text={"Remove"}
+                      />
+                      <NominatedPlayerButton
+                        value={null}
+                        buttonClasses={"animated yellow"}
+                        clickFunction={deselectPlayer}
+                        iconName={"arrow alternate circle down"}
+                        text={"Deselect"}
+                      />
                     </div>
                   </div>
 

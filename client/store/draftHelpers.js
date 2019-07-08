@@ -69,15 +69,15 @@ export const removePlayerFromPlayersList = state => {
   });
 };
 
-export const addPlayerToDrafted = state => {
+export const addPlayerToDrafted = (state, draftAmount) => {
   let newArr = state.draftedPlayers.slice();
   let player = findPlayerById(state, state.nominatedPlayer.id);
-  player.draftAmount = state.draftAmount;
+  player.draftAmount = draftAmount;
   newArr.push(player);
   return newArr;
 };
 
-export const adjustModelForDrafted = state => {
+export const adjustModelForDrafted = (state, draftAmount) => {
   let newModel = Object.assign({}, state.model);
   const avgVal = "avg. value";
   const player = findPlayerById(state, state.nominatedPlayer.id);
@@ -91,7 +91,7 @@ export const adjustModelForDrafted = state => {
     newModel.constraints[position].min--;
     newModel.constraints.FLEX.max--;
   }
-  newModel.constraints[avgVal].max = budget - state.draftAmount;
+  newModel.constraints[avgVal].max = budget - draftAmount;
   newModel.constraints[position].max--;
   delete newModel.constraints[player.name];
   delete newModel.variables[player.name];

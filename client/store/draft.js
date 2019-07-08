@@ -11,10 +11,7 @@ import {
   returnBestTeam,
   addToMyPoints,
   addToOpponentsPoints,
-  sortByAvgValue,
-  checkDraftedForUndo,
-  playersArrForUndo,
-  removedPlayersForUndo
+  sortByAvgValue
 } from "./draftHelpers";
 
 const modelRedux = new ModelInstance(
@@ -29,8 +26,6 @@ const initialState = {
   nominatedPlayer: {},
   removedPlayers: [],
   draftedPlayers: [],
-  draftAmount: 0,
-  draftAmountError: false,
   targets: returnBestTeam(modelRedux.model),
   myTeamsPoints: 0,
   opponentsTeamsPoints: 0
@@ -41,11 +36,8 @@ const initialState = {
 const SEARCH_TERM_CHANGE = "SEARCH_TERM_CHANGE",
       NOMINATE_PLAYER = "NOMINATE_PLAYER",
       REMOVE_PLAYER = "REMOVE_PLAYER",
-      CHANGE_DRAFT_AMOUNT = "CHANGE_DRAFT_AMOUNT",
-      CHANGE_DRAFT_AMOUNT_ERROR = "CHANGE_DRAFT_AMOUNT_ERROR",
       DRAFT_PLAYER = "DRAFT_PLAYER",
-      DESELECT_PLAYER = "DESELECT_PLAYER",
-      UNDO_PREVIOUS_SELECTION = "UNDO_PREVIOUS_SELECTION";
+      DESELECT_PLAYER = "DESELECT_PLAYER";
 
 export const searchTermChange = searchTerm => ({
   type: SEARCH_TERM_CHANGE,
@@ -61,24 +53,14 @@ export const removePlayer = () => ({
   type: REMOVE_PLAYER
 });
 
-export const changeDraftAmount = amount => ({
-  type: CHANGE_DRAFT_AMOUNT,
-  amount
-});
-
-export const draftPlayer = () => ({
-  type: DRAFT_PLAYER
-});
-
-export const changeDraftAmountError = () => ({
-  type: CHANGE_DRAFT_AMOUNT_ERROR
+export const draftPlayer = draftAmount => ({
+  type: DRAFT_PLAYER,
+  draftAmount
 });
 
 export const deselectPlayer = () => ({
   type: DESELECT_PLAYER
 });
-
-export const undoPreviousSelection = () => ({ type: UNDO_PREVIOUS_SELECTION });
 
 export default function(state = initialState, action) {
   switch (action.type) {
@@ -103,30 +85,20 @@ export default function(state = initialState, action) {
         model: removePlayerFromModel(state),
         targets: returnBestTeam(state.model)
       });
-    case CHANGE_DRAFT_AMOUNT:
-      return Object.assign({}, state, { draftAmount: Number(action.amount) });
-    case CHANGE_DRAFT_AMOUNT_ERROR:
-      return Object.assign({}, state, { draftAmountError: true });
     case DRAFT_PLAYER:
       return Object.assign({}, state, {
         draftAmountError: false,
         myTeamsPoints: addToMyPoints(state),
-        draftedPlayers: addPlayerToDrafted(state),
+        draftedPlayers: addPlayerToDrafted(state, action.draftAmount),
         playersArr: removePlayerFromPlayersList(state),
         removedPlayers: addPlayerToRemoved(state),
-        model: adjustModelForDrafted(state),
+        model: adjustModelForDrafted(state, action.draftAmount),
         targets: returnBestTeam(state.model),
         nominatedPlayer: {},
         draftAmount: 0
       });
     case DESELECT_PLAYER:
       return Object.assign({}, state, { nominatedPlayer: {}, draftAmount: 0 });
-    case UNDO_PREVIOUS_SELECTION:
-      return Object.assign({}, state, {
-        draftedPlayers: checkDraftedForUndo(state),
-        playersArr: playersArrForUndo(state),
-        removedPlayers: removedPlayersForUndo
-      });
     default:
       return state;
   }

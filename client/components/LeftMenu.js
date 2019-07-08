@@ -24,12 +24,6 @@ class LeftMenu extends Component {
     const {draftedPlayers, myTeam, targets, changeTab, state} = this;
     const {selectedTab} = state;
 
-    const getTab = (selectedTab) => {
-      if (selectedTab === draftedPlayers) return <DraftedPlayers />;
-      if (selectedTab === myTeam) return <MyTeam />;
-      if (selectedTab === targets) return <Targets />;
-    }
-
     return (
       <div>
         <div className="ui secondary pointing menu">
@@ -45,7 +39,11 @@ class LeftMenu extends Component {
             )
           })}
         </div>
-        {getTab(selectedTab)}
+        {(function() {
+          if (selectedTab === draftedPlayers) return <DraftedPlayers />;
+          if (selectedTab === myTeam) return <MyTeam />;
+          if (selectedTab === targets) return <Targets />
+        })()}
       </div>
     );
   }

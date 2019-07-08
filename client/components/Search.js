@@ -13,7 +13,7 @@ class SearchModule extends Component {
           className="prompt"
           placeholder="Search for a player..."
           onChange={event => {
-            debounce(searchTermChange(event.target.value), 1000);
+            debounce(searchTermChange(event.target.value), 100);
           }}
         />
         <i className="search icon" />

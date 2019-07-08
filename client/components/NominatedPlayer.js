@@ -2,33 +2,63 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   removePlayer,
-  changeDraftAmount,
-  changeDraftAmountError,
   draftPlayer,
   deselectPlayer
 } from "../store/draft";
 import NominatedPlayerButton from './NominatedPlayerButton';
 
 class NominatedPlayer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      draftAmountError: false,
+      draftAmount: 0
+    };
+    this.changeDraftAmount = this.changeDraftAmount.bind(this);
+    this.checkDraftAmountError = this.checkDraftAmountError.bind(this)
+  }
+
+  changeDraftAmount(amount) {
+    this.setState({
+      draftAmount: amount
+    })
+  }
+
+  checkDraftAmountError() {
+    const setDraftAmountError = bool => {
+      this.setState({
+        draftAmountError: bool
+      });
+    }
+    
+    let {draftAmount} = this.state;
+    draftAmount = Number(draftAmount)
+    if(typeof(draftAmount) === 'number' && draftAmount > 0 && String(draftAmount).length <= 2) {
+      setDraftAmountError(false);
+      this.props.draftPlayer(draftAmount);
+    } else {
+      setDraftAmountError(true);
+    }
+  }
+
   render() {
+    const {
+      changeDraftAmount,
+      checkDraftAmountError,
+      state,
+      props
+    } = this;
+    
     const {
       nominatedPlayer,
       removePlayer,
-      changeDraftAmount,
-      changeDraftAmountError,
-      draftAmount,
-      draftAmountError,
-      draftPlayer,
       deselectPlayer
-    } = this.props;
+    } = props;
 
-    const draftAmountCheck = () => {
-      if (!draftAmount || String(draftAmount).length > 2) {
-        changeDraftAmountError();
-      } else {
-        draftPlayer();
-      }
-    };
+    const {
+      draftAmountError,
+      draftAmount
+    } = state
 
     return (
       <div className="bottom-border">
@@ -65,16 +95,14 @@ class NominatedPlayer extends Component {
                           type="text"
                           name="bid-amount"
                           placeholder="Drafted for..."
-                          onChange={event =>
-                            changeDraftAmount(event.target.value)
-                          }
+                          onChange={event => changeDraftAmount(event.target.value)}
                         />
                         <i className="dollar sign icon" />
                       </div>
                       <NominatedPlayerButton
                         value={draftAmount}
                         buttonClasses={"animated green"}
-                        clickFunction={draftAmountCheck}
+                        clickFunction={checkDraftAmountError}
                         text={"Draft"}
                         iconName={"gavel"}
                       />
@@ -121,16 +149,12 @@ class NominatedPlayer extends Component {
 }
 
 const mapState = state => ({
-  nominatedPlayer: state.draft.nominatedPlayer,
-  draftAmount: state.draft.draftAmount,
-  draftAmountError: state.draft.draftAmountError
+  nominatedPlayer: state.draft.nominatedPlayer
 });
 
 const mapDispatch = dispatch => ({
   removePlayer: () => dispatch(removePlayer()),
-  changeDraftAmount: amount => dispatch(changeDraftAmount(amount)),
-  changeDraftAmountError: () => dispatch(changeDraftAmountError()),
-  draftPlayer: () => dispatch(draftPlayer()),
+  draftPlayer: draftAmount => dispatch(draftPlayer(draftAmount)),
   deselectPlayer: () => dispatch(deselectPlayer())
 });
 

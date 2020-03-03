@@ -31,11 +31,13 @@ class NominatedPlayer extends Component {
       });
     }
     
+    const { draftPlayer, removePlayer } = this.props;
     let {draftAmount} = this.state;
     draftAmount = Number(draftAmount)
     if(typeof(draftAmount) === 'number' && draftAmount > 0 && String(draftAmount).length <= 2) {
       setDraftAmountError(false);
-      this.props.draftPlayer(draftAmount);
+      draftPlayer(draftAmount);
+      removePlayer(true);
     } else {
       setDraftAmountError(true);
     }
@@ -75,7 +77,7 @@ class NominatedPlayer extends Component {
                       </h2>
                       <p>
                         Projected Fantasy Points:
-                        {" " + Math.round(nominatedPlayer.fpts)}
+                        {" " + Math.round(nominatedPlayer.fantasyPoints)}
                       </p>
                     </div>
                     <div className="right floated column align-right">
@@ -83,7 +85,7 @@ class NominatedPlayer extends Component {
                         Maximum Bid: ${nominatedPlayer.maxBid}
                       </h2>
                       <p>
-                        Avg. Auction Price: ${nominatedPlayer["avg. value"]}
+                        Avg. Auction Price: ${nominatedPlayer.avgPrice}
                       </p>
                     </div>
                   </div>
@@ -101,21 +103,21 @@ class NominatedPlayer extends Component {
                       </div>
                       <NominatedPlayerButton
                         value={draftAmount}
-                        buttonClasses={"animated green"}
+                        buttonColor={"green"}
                         clickFunction={checkDraftAmountError}
                         text={"Draft"}
                         iconName={"gavel"}
                       />
                       <NominatedPlayerButton
                         value={null}
-                        buttonClasses={"animated red"}
+                        buttonColor={"red"}
                         clickFunction={removePlayer}
                         iconName={"times circle"}
                         text={"Remove"}
                       />
                       <NominatedPlayerButton
                         value={null}
-                        buttonClasses={"animated yellow"}
+                        buttonColor={"yellow"}
                         clickFunction={deselectPlayer}
                         iconName={"arrow alternate circle down"}
                         text={"Deselect"}
@@ -153,7 +155,7 @@ const mapState = state => ({
 });
 
 const mapDispatch = dispatch => ({
-  removePlayer: () => dispatch(removePlayer()),
+  removePlayer: ownPlayer => dispatch(removePlayer(ownPlayer)),
   draftPlayer: draftAmount => dispatch(draftPlayer(draftAmount)),
   deselectPlayer: () => dispatch(deselectPlayer())
 });

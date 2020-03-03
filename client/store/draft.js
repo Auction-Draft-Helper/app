@@ -1,17 +1,11 @@
 import data from "../../data/players.json";
 import { ModelInstance, createPlayersObj } from "../../model";
 import {
-  findPlayerById,
   getMaxBid,
-  addPlayerToRemoved,
   removePlayerFromModel,
-  removePlayerFromPlayersList,
-  addPlayerToDrafted,
-  adjustModelForDrafted,
   returnBestTeam,
-  addToMyPoints,
-  addToOpponentsPoints,
-  sortByAvgValue
+  addToPoints,
+  adjustModelForDrafted
 } from "./draftHelpers";
 
 const modelRedux = new ModelInstance(
@@ -21,17 +15,21 @@ const modelRedux = new ModelInstance(
 
 const initialState = {
   model: modelRedux.model,
-  playersArr: sortByAvgValue(modelRedux.origArr),
+  playersArr: data.sort((playerA, playerB) => {
+    return playerB.avgPrice - playerA.avgPrice;
+  }),
   searchTerm: "",
   nominatedPlayer: {},
   removedPlayers: [],
   draftedPlayers: [],
   targets: returnBestTeam(modelRedux.model),
   myTeamsPoints: 0,
-  opponentsTeamsPoints: 0
+  opponentTeamsPoints: 0,
+  playerMap: data.reduce((obj, player) => {
+    obj[player.id] = player;
+    return obj;
+  }, {})
 };
-
-//Actions
 
 const SEARCH_TERM_CHANGE = "SEARCH_TERM_CHANGE",
       NOMINATE_PLAYER = "NOMINATE_PLAYER",
@@ -49,8 +47,9 @@ export const nominatePlayer = playerId => ({
   playerId
 });
 
-export const removePlayer = () => ({
-  type: REMOVE_PLAYER
+export const removePlayer = ownPlayer => ({
+  type: REMOVE_PLAYER,
+  ownPlayer
 });
 
 export const draftPlayer = draftAmount => ({
@@ -68,37 +67,40 @@ export default function(state = initialState, action) {
       return Object.assign({}, state, { searchTerm: action.searchTerm });
     case NOMINATE_PLAYER:
       return Object.assign({}, state, {
-        nominatedPlayer: getMaxBid(
-          state,
-          findPlayerById(state, action.playerId)
-        ),
-        searchTerm: ""
-      });
+          nominatedPlayer: getMaxBid(
+            state.model,
+            state.targets,
+            state.playerMap[action.playerId]
+          ),
+          searchTerm: ""
+        });
     case REMOVE_PLAYER:
       return Object.assign({}, state, {
-        draftAmountError: false,
-        draftAmount: 0,
-        opponentsTeamsPoints: addToOpponentsPoints(state),
-        playersArr: removePlayerFromPlayersList(state),
-        removedPlayers: addPlayerToRemoved(state),
-        nominatedPlayer: {},
-        model: removePlayerFromModel(state),
-        targets: returnBestTeam(state.model)
+        opponentTeamsPoints: addToPoints(
+          state.opponentTeamsPoints,
+          state.nominatedPlayer.fantasyPoints,
+          action.ownPlayer),
+        playersArr: state.playersArr.filter((player) => {
+          return player.id !== state.nominatedPlayer.id
+        }),
+        removedPlayers: [state.nominatedPlayer, ...state.removedPlayers],
+        model: removePlayerFromModel(state.model, state.nominatedPlayer, action.ownPlayer),
+        targets: returnBestTeam(state.model),
+        nominatedPlayer: {}
       });
     case DRAFT_PLAYER:
       return Object.assign({}, state, {
-        draftAmountError: false,
-        myTeamsPoints: addToMyPoints(state),
-        draftedPlayers: addPlayerToDrafted(state, action.draftAmount),
-        playersArr: removePlayerFromPlayersList(state),
-        removedPlayers: addPlayerToRemoved(state),
-        model: adjustModelForDrafted(state, action.draftAmount),
-        targets: returnBestTeam(state.model),
-        nominatedPlayer: {},
-        draftAmount: 0
+        myTeamsPoints: addToPoints(
+          state.myTeamsPoints,
+          state.nominatedPlayer.fantasyPoints),
+        draftedPlayers: [...state.draftedPlayers, state.nominatedPlayer],
+        model: adjustModelForDrafted(
+          state.model,
+          state.nominatedPlayer,
+          action.draftAmount)
       });
     case DESELECT_PLAYER:
-      return Object.assign({}, state, { nominatedPlayer: {}, draftAmount: 0 });
+      return Object.assign({}, state, { nominatedPlayer: {} });
     default:
       return state;
   }

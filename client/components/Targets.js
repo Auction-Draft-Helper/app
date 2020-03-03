@@ -12,7 +12,7 @@ class Targets extends Component {
               return (
                 <div className="item" key={player.id}>
                   {index + 1}. {player.name}, {player.position}, Avg. Price:
-                  {" $" + player["avg. value"]}
+                  {" $" + player.avgPrice}
                 </div>
               );
             })}

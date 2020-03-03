@@ -4,14 +4,15 @@ import { connect } from "react-redux";
 class DraftedPlayers extends Component {
   render() {
     const { removedPlayers } = this.props;
+    const listLength = removedPlayers.length;
     return (
       <div>
         {removedPlayers.length ? (
           <div className="ui list">
-            {removedPlayers.map(player => {
+            {removedPlayers.map((player, index) => {
               return (
                 <div className="item" key={player.id}>
-                  {player.draftPosition}. {player.name}, {player.position}
+                  {listLength - index}. {player.name}, {player.position}
                 </div>
               );
             })}

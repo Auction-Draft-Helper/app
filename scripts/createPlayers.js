@@ -2,6 +2,7 @@
 
 const fs = require('fs'),
       yahooAuctionPlayers = JSON.parse(fs.readFileSync('data/auctionValues.json')),
+      yahooDraftPlayers = JSON.parse(fs.readFileSync('data/draftPosition.json')),
       QB = 'QB',
       RB = 'RB',
       WR = 'WR',
@@ -9,11 +10,13 @@ const fs = require('fs'),
       K = 'K',
       DST = 'DST',
       avgCost = 'Avg Cost',
+      avgPick = 'Avg Pick',
+      receptionPoints = 0.5,
       leagueSettings = {
         teams: 10,
         QB: 1,
-        RB: 2,
-        WR: 2,
+        RB: 3,
+        WR: 3,
         TE: 1,
         FLEX: 1,
         K: 1,
@@ -30,10 +33,13 @@ const fs = require('fs'),
   const { positions, flexPositions, teams } = leagueSettings,
         getPlayerName = (playerInfo) => playerInfo.split(' ').slice(0, -1).join(' '),
         getAuctionValue = (auctionPlayer) => {
-          return Math.round(Number(auctionPlayer[avgCost].substring(1)));
+          return Math.round(Number(auctionPlayer[avgCost]), 0);
         },
+        getYahooPlayer = (array, name) => array.find(yahooPlayer => {
+          return yahooPlayer.Name.indexOf(name) != -1
+        }),
         getPlayerPoints = (player) => player.FPTS,
-        getFlexPoints = (player) => player.FPTS + (player.REC * 0.5);
+        getFlexPoints = (player) => player.FPTS + (player.REC * receptionPoints);
 
   for(let i = 0; i < positions.length; i++) {
     const position = positions[i],
@@ -45,7 +51,7 @@ const fs = require('fs'),
     let isDefense = position === DST,
         isKicker = position === K,
         isFlexPosition = flexPositions.includes(position),
-        playerPointsFunc = isFlexPosition ? getFlexPoints : getPlayerPoints;
+        calculatePlayerPoints = isFlexPosition ? getFlexPoints : getPlayerPoints;
 
     positionMap.FLEX = isFlexPosition ? 1 : 0;
     tempPlayersArray = await JSON.parse(fs.readFileSync(`data/${positions[i]}.json`));
@@ -53,9 +59,8 @@ const fs = require('fs'),
     tempPlayersArray = tempPlayersArray.map((player) => {
       const playerInfo = player.Player,
             name = isDefense ? playerInfo : getPlayerName(playerInfo),
-            auctionPlayer = yahooAuctionPlayers.find((yahooPlayer) => {
-              return yahooPlayer.Name.indexOf(name) != -1
-            });
+            auctionPlayer = getYahooPlayer(yahooAuctionPlayers, name),
+            draftPlayer = getYahooPlayer(yahooDraftPlayers, name);
 
       idCount++;
 
@@ -63,19 +68,22 @@ const fs = require('fs'),
         ...positionMap,
         name,
         position,
-        fpts: playerPointsFunc(player),
+        fantasyPoints: calculatePlayerPoints(player),
         id: idCount,
-        'avg. value': auctionPlayer && !isKicker ? getAuctionValue(auctionPlayer) : 1
+        avgPrice: auctionPlayer && !isKicker ? getAuctionValue(auctionPlayer) : 1,
+        avgDraftPosition: draftPlayer ? draftPlayer[avgPick] : 1000
       }
-    }).sort((playerA, playerB) => playerB.fpts - playerA.fpts);
+    }).sort((playerA, playerB) => playerB.fantasyPoints - playerA.fantasyPoints);
+
+    
 
     let positionCount = teams * leagueSettings[position],
         midPoint = positionCount / 2,
-        medianPoints = (tempPlayersArray[midPoint].fpts + tempPlayersArray[midPoint - 1].fpts) / 2,
-        replacementPoints = tempPlayersArray[positionCount - 1].fpts;
+        medianPoints = (tempPlayersArray[midPoint].fantasyPoints + tempPlayersArray[midPoint - 1].fantasyPoints) / 2,
+        replacementPoints = tempPlayersArray[positionCount - 1].fantasyPoints;
 
-    tempPlayersArray.forEach((player) => {
-      let playerPoints = player.fpts;
+    tempPlayersArray.forEach(player => {
+      let playerPoints = player.fantasyPoints;
       player.PAM = playerPoints - medianPoints;
       player.PAR = playerPoints - replacementPoints;
     });

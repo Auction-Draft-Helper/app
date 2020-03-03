@@ -1,107 +1,67 @@
 import solver from "javascript-lp-solver";
 
-export const findPlayerById = (state, playerId) => {
-  for (let key in state.model.variables) {
-    if (state.model.variables[key].id === Number(playerId)) {
-      return state.model.variables[key];
-    }
-  }
-};
-
 export const getBestTeam = model => solver.Solve(model);
 
-export const getMaxBid = (state, player) => {
-  if (state.targets.length === 1) {
-    player.maxBid = state.model.constraints["avg. value"].max;
-    return player;
-  }
-  const avgVal = "avg. value";
-  const originalVal = player[avgVal];
-  const budget = state.model.constraints[avgVal].max;
-  let maxBid = 0;
+export const getMaxBid = (model, targets, player) => {
+  const budget = model.constraints.avgPrice.max,
+        assignMaxBid = (bid) => player.maxBid = bid;
 
-  if (getBestTeam(state.model)[player.name] === 1) {
-    for (let i = player[avgVal]; i <= budget; i++) {
-      state.model.variables[player.name][avgVal] = i;
-      if (getBestTeam(state.model)[player.name] === 1) {
-        maxBid = i;
-      } else {
-        state.model.variables[player.name][avgVal] = originalVal;
-        player["maxBid"] = maxBid;
-        break;
-      }
-    }
+  if (targets.length === 1) {
+    assignMaxBid(budget);
   } else {
-    for (let i = player[avgVal]; i >= 1; i--) {
-      state.model.variables[player.name][avgVal] = i;
-      if (getBestTeam(state.model)[player.name] !== 1) {
-        maxBid = i;
-      } else {
-        state.model.variables[player.name][avgVal] = originalVal;
-        player["maxBid"] = maxBid;
+    const originalAvgPrice = player.avgPrice,
+          assignBackToOriginalPrice = () => {
+            model.variables[player.name].avgPrice = originalAvgPrice;
+          },
+          playerModelFit = () => getBestTeam(model)[player.name] === 1,
+          iterationFlag = playerModelFit() ? true : false,
+          loopLimit = iterationFlag ? budget : 0,
+          loopCheck = iterationFlag ? (i) => i <= loopLimit : (i) => i > loopLimit,
+          loopIterator = iterationFlag ? (i) => i + 1 : (i) => i - 1,
+          playerCheck = iterationFlag ? () => playerModelFit() : () => !playerModelFit();
+
+    for (let i = player.avgPrice; loopCheck(i); i = loopIterator(i)) {
+      model.variables[player.name].avgPrice = i;
+      if (!playerCheck()) {
+        assignMaxBid(i);
         break;
       }
     }
+
+    assignBackToOriginalPrice();
+    if (!player.maxBid) player.maxBid = "N/A";
   }
-  if (!player.maxBid) player.maxBid = "N/A";
   return player;
 };
 
-export const addPlayerToRemoved = state => {
-  let newArr = state.removedPlayers.slice();
-  let player = findPlayerById(state, state.nominatedPlayer.id);
-  player.draftPosition = newArr.length + 1;
-  newArr.unshift(player);
-  return newArr;
-};
-
-export const removePlayerFromModel = state => {
-  let player = findPlayerById(state, state.nominatedPlayer.id);
-  let newModel = Object.assign({}, state.model);
-  delete newModel.constraints[player.name];
-  delete newModel.variables[player.name];
+export const removePlayerFromModel = (model, player, ownPlayer) => {
+  if (ownPlayer) return model;
+  const newModel = Object.assign({}, model);
+  newModel.constraints[player.name].max = 0;
   return newModel;
 };
 
-export const removePlayerFromPlayersList = state => {
-  return state.playersArr.filter(playerInFilter => {
-    return playerInFilter.name !== findPlayerById(state, state.nominatedPlayer.id).name
-  });
-};
-
-export const addPlayerToDrafted = (state, draftAmount) => {
-  let newArr = state.draftedPlayers.slice();
-  let player = findPlayerById(state, state.nominatedPlayer.id);
-  player.draftAmount = draftAmount;
-  newArr.push(player);
-  return newArr;
-};
-
-export const adjustModelForDrafted = (state, draftAmount) => {
-  let newModel = Object.assign({}, state.model);
-  const avgVal = "avg. value";
-  const player = findPlayerById(state, state.nominatedPlayer.id);
-  const budget = newModel.constraints[avgVal].max;
-  const position = player.position;
-  if (
-    player.position === "RB" ||
-    player.position === "WR" ||
-    player.position === "TE"
-  ) {
-    newModel.constraints[position].min--;
-    newModel.constraints.FLEX.max--;
+export const adjustModelForDrafted = (model, player, draftAmount) => {
+  const newModel = Object.assign({}, model),
+        position = player.position,
+        constraints = newModel.constraints;
+  if (["RB", "WR", "TE"].includes(position)) {
+    constraints.FLEX.max--;
+    constraints.FLEX.min--;
   }
-  newModel.constraints[avgVal].max = budget - draftAmount;
-  newModel.constraints[position].max--;
-  delete newModel.constraints[player.name];
-  delete newModel.variables[player.name];
+  player.draftAmount = draftAmount;
+  constraints.avgPrice.max = constraints.avgPrice.max - draftAmount;
+  constraints[position].min--;
+  constraints[position].max--;
+  constraints[player.name].max =  0;
   return newModel;
 };
 
 export const returnBestTeam = model => {
-  const obj = getBestTeam(model);
-  const finalArr = [];
-  const extras = ["result", "bounded", "feasible"];
+  const obj = getBestTeam(model),
+        finalArr = [],
+        extras = ["result", "bounded", "feasible"];
+  console.log(obj)
   for (let key in obj) {
     if (obj.hasOwnProperty(key) && !extras.includes(key) && obj[key] > 0.5) {
       finalArr.push(model.variables[key]);
@@ -110,18 +70,7 @@ export const returnBestTeam = model => {
   return finalArr;
 };
 
-export const addToMyPoints = state => {
-  const player = findPlayerById(state, state.nominatedPlayer.id);
-  return state.myTeamsPoints + player.fpts;
-};
-
-export const addToOpponentsPoints = state => {
-  const player = findPlayerById(state, state.nominatedPlayer.id);
-  return state.opponentsTeamsPoints + player.fpts;
-};
-
-export const sortByAvgValue = playersArr => {
-  return playersArr.sort((playerA, playerB) => {
-    return playerB["avg. value"] - playerA["avg. value"];
-  });
-};
+export const addToPoints = (totalPoints, playerPoints, ownPlayer) => {
+  if (ownPlayer) return totalPoints;
+  return totalPoints + playerPoints;
+}

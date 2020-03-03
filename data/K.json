@@ -2,260 +2,225 @@
   {
     "Player": "Greg Zuerlein LAR",
     "FG": 29.6,
-    "FGA": 35.4,
-    "XPT": 43.1,
-    "FPTS": 132.1
-  },
-  {
-    "Player": "Stephen Gostkowski NE",
-    "FG": 27.9,
-    "FGA": 33.3,
-    "XPT": 44.1,
-    "FPTS": 127.9
+    "FGA": 35.2,
+    "XPT": 42.9,
+    "FPTS": 131.6
   },
   {
     "Player": "Justin Tucker BAL",
-    "FG": 30.5,
-    "FGA": 35.8,
-    "XPT": 34.7,
-    "FPTS": 126.1
+    "FG": 30.9,
+    "FGA": 36.2,
+    "XPT": 35.1,
+    "FPTS": 127.9
+  },
+  {
+    "Player": "Stephen Gostkowski NE",
+    "FG": 27.8,
+    "FGA": 33.2,
+    "XPT": 43.9,
+    "FPTS": 127.4
   },
   {
     "Player": "Wil Lutz NO",
     "FG": 27.4,
     "FGA": 32.6,
-    "XPT": 42.1,
-    "FPTS": 124.2
+    "XPT": 42,
+    "FPTS": 124.1
   },
   {
     "Player": "Harrison Butker KC",
-    "FG": 26.5,
-    "FGA": 31.4,
-    "XPT": 42.3,
-    "FPTS": 121.7
+    "FG": 26.4,
+    "FGA": 31.2,
+    "XPT": 42.9,
+    "FPTS": 122
   },
   {
     "Player": "Ka'imi Fairbairn HOU",
-    "FG": 28.3,
-    "FGA": 34.3,
-    "XPT": 35.7,
-    "FPTS": 120.6
+    "FG": 28.6,
+    "FGA": 34.8,
+    "XPT": 36,
+    "FPTS": 121.9
   },
   {
     "Player": "Robbie Gould SF",
-    "FG": 27.9,
-    "FGA": 32.2,
-    "XPT": 35.7,
-    "FPTS": 119.5
+    "FG": 28,
+    "FGA": 32.3,
+    "XPT": 35.8,
+    "FPTS": 119.6
   },
   {
     "Player": "Michael Badgley LAC",
-    "FG": 26.1,
-    "FGA": 29.9,
-    "XPT": 38.7,
-    "FPTS": 117.1
-  },
-  {
-    "Player": "Adam Vinatieri IND",
-    "FG": 25.2,
-    "FGA": 30.4,
-    "XPT": 40.8,
-    "FPTS": 116.5
-  },
-  {
-    "Player": "Brett Maher DAL",
     "FG": 26.2,
-    "FGA": 32.8,
-    "XPT": 35.9,
-    "FPTS": 114.4
+    "FGA": 29.9,
+    "XPT": 38.9,
+    "FPTS": 117.5
   },
   {
-    "Player": "Giorgio Tavecchio ATL",
-    "FG": 25.4,
-    "FGA": 30.9,
-    "XPT": 36.9,
-    "FPTS": 113.1
-  },
-  {
-    "Player": "Mason Crosby GB",
-    "FG": 26,
-    "FGA": 31.5,
-    "XPT": 35,
-    "FPTS": 113
+    "Player": "Matt Bryant ATL",
+    "FG": 26.7,
+    "FGA": 30.2,
+    "XPT": 37.2,
+    "FPTS": 117.2
   },
   {
     "Player": "Jake Elliott PHI",
-    "FG": 25.1,
-    "FGA": 30.7,
-    "XPT": 36.8,
-    "FPTS": 112.2
+    "FG": 25.8,
+    "FGA": 31.5,
+    "XPT": 37.6,
+    "FPTS": 115
+  },
+  {
+    "Player": "Brett Maher DAL",
+    "FG": 26,
+    "FGA": 32.7,
+    "XPT": 35.7,
+    "FPTS": 113.9
+  },
+  {
+    "Player": "Mason Crosby GB",
+    "FG": 26.2,
+    "FGA": 31.8,
+    "XPT": 35.1,
+    "FPTS": 113.7
   },
   {
     "Player": "Matt Prater DET",
-    "FG": 26.7,
-    "FGA": 31.7,
-    "XPT": 31.9,
-    "FPTS": 112.1
+    "FG": 26.9,
+    "FGA": 31.5,
+    "XPT": 32,
+    "FPTS": 112.7
   },
   {
-    "Player": "Austin Seibert CLE",
-    "FG": 24.4,
-    "FGA": 29.3,
-    "XPT": 38.8,
-    "FPTS": 112
-  },
-  {
-    "Player": "Graham Gano CAR",
-    "FG": 25,
-    "FGA": 29.8,
-    "XPT": 36.5,
-    "FPTS": 111.4
-  },
-  {
-    "Player": "Ryan Succop TEN",
-    "FG": 26,
-    "FGA": 31.6,
-    "XPT": 33.1,
+    "Player": "Kaare Vedvik NYJ",
+    "FG": 25.7,
+    "FGA": 30.7,
+    "XPT": 34,
     "FPTS": 111.1
   },
   {
     "Player": "Jason Myers SEA",
     "FG": 24.8,
-    "FGA": 28.6,
-    "XPT": 36.1,
-    "FPTS": 110.4
+    "FGA": 28.7,
+    "XPT": 36.2,
+    "FPTS": 110.7
+  },
+  {
+    "Player": "Ryan Succop TEN",
+    "FG": 25.8,
+    "FGA": 31.2,
+    "XPT": 32.7,
+    "FPTS": 110
   },
   {
     "Player": "Aldrick Rosas NYG",
-    "FG": 25.8,
+    "FG": 25.6,
     "FGA": 29.5,
-    "XPT": 32,
-    "FPTS": 109.4
+    "XPT": 32.1,
+    "FPTS": 108.9
   },
   {
-    "Player": "Chandler Catanzaro NYJ",
-    "FG": 25,
-    "FGA": 29.9,
-    "XPT": 32,
-    "FPTS": 106.9
-  },
-  {
-    "Player": "Chris Boswell PIT",
-    "FG": 22.2,
-    "FGA": 27.7,
-    "XPT": 39.8,
-    "FPTS": 106.5
+    "Player": "Austin Seibert CLE",
+    "FG": 23.4,
+    "FGA": 28.4,
+    "XPT": 38.2,
+    "FPTS": 108.4
   },
   {
     "Player": "Matt Gay TB",
-    "FG": 23.9,
-    "FGA": 28.4,
-    "XPT": 32.9,
-    "FPTS": 104.5
+    "FG": 24.2,
+    "FGA": 29.4,
+    "XPT": 35.7,
+    "FPTS": 108.4
+  },
+  {
+    "Player": "Chris Boswell PIT",
+    "FG": 22.3,
+    "FGA": 27.8,
+    "XPT": 39.7,
+    "FPTS": 106.5
+  },
+  {
+    "Player": "Adam Vinatieri IND",
+    "FG": 24.7,
+    "FGA": 29.4,
+    "XPT": 32.3,
+    "FPTS": 106.2
   },
   {
     "Player": "Eddy Pineiro CHI",
-    "FG": 23.3,
-    "FGA": 29.3,
-    "XPT": 34.6,
-    "FPTS": 104.4
+    "FG": 23.4,
+    "FGA": 29,
+    "XPT": 34.8,
+    "FPTS": 105
   },
   {
     "Player": "Dan Bailey MIN",
-    "FG": 24.3,
-    "FGA": 30.7,
-    "XPT": 30.3,
-    "FPTS": 103.2
-  },
-  {
-    "Player": "Josh Lambo JAC",
-    "FG": 24,
-    "FGA": 28,
-    "XPT": 29.1,
-    "FPTS": 101.1
-  },
-  {
-    "Player": "Daniel Carlson OAK",
-    "FG": 23.9,
-    "FGA": 28.8,
-    "XPT": 29.3,
-    "FPTS": 101
+    "FG": 24.2,
+    "FGA": 30.6,
+    "XPT": 30.2,
+    "FPTS": 102.8
   },
   {
     "Player": "Brandon McManus DEN",
-    "FG": 23.3,
-    "FGA": 28,
-    "XPT": 30.6,
-    "FPTS": 100.6
+    "FG": 23.7,
+    "FGA": 28.5,
+    "XPT": 31,
+    "FPTS": 102.1
+  },
+  {
+    "Player": "Josh Lambo JAC",
+    "FG": 24.1,
+    "FGA": 28.1,
+    "XPT": 29.2,
+    "FPTS": 101.5
+  },
+  {
+    "Player": "Daniel Carlson OAK",
+    "FG": 23.8,
+    "FGA": 28.7,
+    "XPT": 29.1,
+    "FPTS": 100.7
+  },
+  {
+    "Player": "Joey Slye CAR",
+    "FG": 22.1,
+    "FGA": 26.8,
+    "XPT": 32.7,
+    "FPTS": 99
   },
   {
     "Player": "Dustin Hopkins WAS",
-    "FG": 23.8,
-    "FGA": 28.4,
-    "XPT": 28.3,
-    "FPTS": 99.6
-  },
-  {
-    "Player": "Steven Hauschka BUF",
-    "FG": 23.3,
-    "FGA": 28,
-    "XPT": 27.8,
-    "FPTS": 97.8
+    "FG": 23.6,
+    "FGA": 28.1,
+    "XPT": 27.9,
+    "FPTS": 98.6
   },
   {
     "Player": "Randy Bullock CIN",
-    "FG": 22.5,
-    "FGA": 26.5,
-    "XPT": 29.8,
-    "FPTS": 97.2
+    "FG": 22.8,
+    "FGA": 26.7,
+    "XPT": 30,
+    "FPTS": 98.4
+  },
+  {
+    "Player": "Steven Hauschka BUF",
+    "FG": 23.5,
+    "FGA": 28.2,
+    "XPT": 27.7,
+    "FPTS": 98.1
   },
   {
     "Player": "Jason Sanders MIA",
-    "FG": 22,
-    "FGA": 24.4,
-    "XPT": 26,
-    "FPTS": 91.9
+    "FG": 22.6,
+    "FGA": 25.2,
+    "XPT": 27.8,
+    "FPTS": 95.7
   },
   {
     "Player": "Zane Gonzalez ARI",
-    "FG": 20.9,
+    "FG": 21,
     "FGA": 26.7,
-    "XPT": 29,
+    "XPT": 28.6,
     "FPTS": 91.7
-  },
-  {
-    "Player": "Greg Joseph CLE",
-    "FG": 17.9,
-    "FGA": 20.8,
-    "XPT": 27.4,
-    "FPTS": 81
-  },
-  {
-    "Player": "Cairo Santos TB",
-    "FG": 16,
-    "FGA": 18.9,
-    "XPT": 26.3,
-    "FPTS": 74.4
-  },
-  {
-    "Player": "Tristan Vizcaino CIN",
-    "FG": 0,
-    "FGA": 0,
-    "XPT": 0,
-    "FPTS": 0
-  },
-  {
-    "Player": "Sam Ficken GB",
-    "FG": 0,
-    "FGA": 0,
-    "XPT": 0,
-    "FPTS": 0
-  },
-  {
-    "Player": "Kasey Redfern DAL",
-    "FG": 0,
-    "FGA": 0,
-    "XPT": 0,
-    "FPTS": 0
   }
 ]

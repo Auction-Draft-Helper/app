@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class Scoreboard extends Component {
   render() {
-    const { myTeamsPoints, opponentsTeamsPoints, remainingBudget } = this.props;
+    const { myTeamsPoints, opponentTeamsPoints, remainingBudget } = this.props;
     return (
       <div className="ui card full-width">
         <div className="content">
@@ -36,7 +36,7 @@ class Scoreboard extends Component {
             <p />
             <div className="statistic">
               <div className="value">
-                {Math.round(opponentsTeamsPoints / 9).toLocaleString()}
+                {Math.round(opponentTeamsPoints / 9).toLocaleString()}
               </div>
               <div className="label">Avg. Opponent</div>
             </div>
@@ -49,8 +49,8 @@ class Scoreboard extends Component {
 
 const mapState = state => ({
   myTeamsPoints: state.draft.myTeamsPoints,
-  opponentsTeamsPoints: state.draft.opponentsTeamsPoints,
-  remainingBudget: state.draft.model.constraints["avg. value"].max
+  opponentTeamsPoints: state.draft.opponentTeamsPoints,
+  remainingBudget: state.draft.model.constraints.avgPrice.max
 });
 
 export default connect(mapState)(Scoreboard);

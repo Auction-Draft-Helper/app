@@ -23,7 +23,7 @@ class ModelInstance {
         K:    { min: 1, max: 1 },
         DST:  { min:1, max: 1 },
         FLEX: { min: 11, max: 11 },
-        "avg. value": { max: 200 }
+        avgPrice: { max: 200 }
       },
       variables: obj
     };

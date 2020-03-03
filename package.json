@@ -17,7 +17,7 @@
     "debounce": "^1.1.0",
     "express": "^4.16.3",
     "javascript-lp-solver": "^0.4.5",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.3",
     "path": "^0.12.7",
     "react": "^16.4.1",
